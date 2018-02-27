@@ -1,7 +1,7 @@
 # Личный проект «Техномарт»
 
 * Студент: [Максим Кузнецов](https://up.htmlacademy.ru/htmlcss/20/user/619205).
-* Наставник: `Неизвестно`.
+* Наставник: [Никита Рогатнев](https://htmlacademy.ru/profile/nikita_rogatnev).
 
 ---
 
