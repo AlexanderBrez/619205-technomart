@@ -14,7 +14,7 @@
       <ul class="main-upper-header-elements">
         <!-- ЛОГОТИП -->
         <li class="main-upper-header-element-logo">
-          <a>
+          <a href="index.html">
               <img alt="Логотип ТЕХНОМАРТ"/>
             </a>
         </li>
@@ -85,89 +85,159 @@
       <h2>Перфораторы</h2>
     </div>
     <aside class="filter">
-      <div class="filter-tag">
-        <span>ФИЛЬТР:</span>
-      </div>
-      <div class="cost-tag">
-        <b>ЦЕНА:</b>
-      </div>
-      <div class="cost-range">
-        <input type="range" min="0" max="35000" step="1" value="500" />
-      </div>
-      <div class="cost-minimal">
-        <span>0</span>
-      </div>
-      <div class="cost-neutral">
-        <span>-</span>
-      </div>
-      <div class="cost-maximum">
-        <span>30000</span>
-      </div>
-      <div class="producer-tag">
-        <b>ПРОИЗВОДИТЕЛИ:</b>
-      </div>
-      <div class="producer-list">
-        <input name="producer" type="radio" value="bosch" id="choice1" checked/>
-        <label for="Choice1">BOSCH</label>
-        <input name="producer" type="radio" value="interskol" id="choice2" />
-        <label for="Choice2">Интерскол</label>
-        <input name="producer" type="radio" value="makita" id="Choice3" checked/>
-        <label for="Choice3">MAKITA</label>
-        <input name="producer" type="radio" value="dewalt" id="Choice4" />
-        <label for="Choice4">DEWALT</label>
-        <input name="producer" type="radio" value="hitachi" id="Choice5" />
-        <label for="Choice5">HITACHI</label>
-      </div>
-      <div class="supply-tag">
-        <b>ПИТАНИЕ:</b>
-      </div>
-      <div class="supply-list">
-        <input name="supply" type="radio" value="battery" id="choice1" checked/>
-        <label for="Choice1">АККУМУЛЯТРОНЫЕ</label>
-        <input name="supply" type="radio" value="net" id="choice2" />
-        <label for="Choice2">СЕТЕВЫЕ</label>
-      </div>
-      <input type="submit" value="ПОКАЗАТЬ" />
+      <form action="https://htmlacademy.ru" method="get">
+        <div class="filter-tag">
+          <span>ФИЛЬТР:</span>
+        </div>
+        <div class="cost-tag">
+          <h2>ЦЕНА:</h2>
+        </div>
+        <div class="cost-range">
+          <input type="range" min="0" max="35000" step="1" value="500" />
+        </div>
+        <div class="cost-minimal">
+          <span>0</span>
+        </div>
+        <div class="cost-neutral">
+          <span>-</span>
+        </div>
+        <div class="cost-maximum">
+          <span>30000</span>
+        </div>
+        <div class="producer-tag">
+          <h2>ПРОИЗВОДИТЕЛИ:</h2>
+        </div>
+        <div class="producer-list">
+          <input name="producer" type="radio" value="bosch" id="choice1" checked/>
+          <label for="choice1">BOSCH</label>
+          <input name="producer" type="radio" value="interskol" id="choice2" />
+          <label for="choice2">Интерскол</label>
+          <input name="producer" type="radio" value="makita" id="choice3" checked/>
+          <label for="choice3">MAKITA</label>
+          <input name="producer" type="radio" value="dewalt" id="choice4" />
+          <label for="choice4">DEWALT</label>
+          <input name="producer" type="radio" value="hitachi" id="choice5" />
+          <label for="choice5">HITACHI</label>
+        </div>
+        <div class="supply-tag">
+          <h2>ПИТАНИЕ:</h2>
+        </div>
+        <div class="supply-list">
+          <input name="supply" type="radio" value="battery" id="supply-choice1" checked/>
+          <label for="supply-choice1">АККУМУЛЯТРОНЫЕ</label>
+          <input name="supply" type="radio" value="net" id="supply-choice2" />
+          <label for="supply-choice2">СЕТЕВЫЕ</label>
+        </div>
+        <input type="submit" value="ПОКАЗАТЬ" />
+      </form>
     </aside>
     <div class="sorting">
       <span>СОРТИРОВКА</span>
-      <div class="sorting-by-cost">
-        <span>ПО ЦЕНЕ</span>
+      <ul class="sorting-by">
+        <li><a href="#">ПО ЦЕНЕ</a></li>
+        <li><a href="#">ПО ТИПУ</a></li>
+        <li><a href="#">ПО ФУНКЦИОНАЛУ</a></li>
+      </ul>
+      <ul class="sorting-by-controls">
+        <li><a href="#">СТРЕЛОЧКА ВВЕРХ</a></li>
+        <li><a href="#">СТРЕЛОЧКА ВНИЗ</a></li>
+      </ul>
+    </div>
+    <section class="all-items">
+      <ul class="all-items-list">
+        <li class="item-list">
+          <article class="item">
+            <h1><a href="#">Перфоратор BOSCH BFG 3000</a></h1>
+            <span>22500 Р.</span>
+            <a href="#">15500 Р.</a>
+          </article>
+        </li>
+        <li class="item-list">
+          <article class="item">
+            <h1><a href="#">Перфоратор BOSCH BFG 6000</a></h1>
+            <span>30500 Р.</span>
+            <a href="#">25500 Р.</a>
+          </article>
+        </li>
+        <li class="item-list">
+          <article class="item item-new">
+            <a href="#">КУПИТЬ</a>
+            <a href="#">В ЗАКЛАДКИ</a>
+            <h1><a href="#">Перфоратор BOSCH BFG 2000</a></h1>
+            <a href="#">12500 Р.</a>
+          </article>
+        </li>
+        <li class="item-list">
+          <article class="item">
+            <h1><a href="#">Перфоратор BOSCH BFG 3000</a></h1>
+            <span>22500 Р.</span>
+            <a href="#">15500 Р.</a>
+          </article>
+        </li>
+        <li class="item-list">
+          <article class="item item-new">
+            <h1><a href="#">Перфоратор BOSCH BFG 6000</a></h1>
+            <span>30500 Р.</span>
+            <a href="#">25500 Р.</a>
+          </article>
+        </li>
+        <li class="item-list">
+          <article class="item">
+            <h1><a href="#">Перфоратор BOSCH BFG 2000</a></h1>
+            <a href="#">12500 Р.</a>
+          </article>
+        </li>
+        <li class="item-list">
+          <article class="item item-new">
+            <h1><a href="#">Перфоратор BOSCH BFG 3000</a></h1>
+            <span>22500 Р.</span>
+            <a href="#">15500 Р.</a>
+          </article>
+        </li>
+        <li class="item-list">
+          <article class="item">
+            <h1><a href="#">Перфоратор BOSCH BFG 6000</a></h1>
+            <span>30500 Р.</span>
+            <a href="#">25500 Р.</a>
+          </article>
+        </li>
+        <li class="item-list">
+          <article class="item">
+            <h1><a href="#">Перфоратор BOSCH BFG 2000</a></h1>
+            <a href="#">12500 Р.</a>
+          </article>
+        </li>
+      </ul>
+      <div class="pages-controls">
+        <ul class="pages-numbers">
+          <li class="page-number"><a href="#">1</a></li>
+          <li class="page-number"><a href="#">2</a></li>
+          <li class="page-number"><a href="#">3</a></li>
+        </ul>
+        <a href="#">СЛЕДУЮЩАЯ</a>
       </div>
-      <div class="sorting-by-type">
-        <span>ПО ТИПУ</span>
-      </div>
-      <div class="sorting-by-functions">
-        <span>ПО ФУНКЦИОНАЛУ</span>
-      </div>
-      <div class="sorting-element-up">
-        стрелочка вверх
-      </div>
-      <div class="sorting-element-down">
-        стрелочка вниз
-      </div>
+    </section>
+    <div class="about">
+      <b>ПАРА СЛОВ О ПЕРФОРАТОРАХ</b>
+      <p>
+        Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.<br />
+        Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели,
+        шуруповерта и отбойного молотка. В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.
+      </p>
     </div>
   </main>
-
-
-
-
-
-
-
-
   <footer class="main-footer">
     <!-- ВЕРХУШКА ПОДВАЛА -->
     <div class="main-upper-footer">
       <!-- ЛОГОТИП ТЕХНОМАРТ -->
-      <a class="main-header-logo">
+      <a href="index.html" class="main-header-logo">
             <img alt="Логотип ТЕХНОМАРТ"/>
           </a>
       <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 <a href="#">+7 (812) 555-05-55</a></p>
       <ul class="main-footer-navigation">
         <li><a href="#">Компания</a></li>
         <li><a href="#">Новости</a></li>
-        <li><a href="catalog.html">Каталог</a></li>
+        <li><a>Каталог</a></li>
         <li><a href="#">Доставка</a></li>
         <li><a href="#">Контакты</a></li>
         <li><a href="#">Материалы</a></li>
