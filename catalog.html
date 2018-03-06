@@ -15,21 +15,24 @@
         <!-- ЛОГОТИП -->
         <li class="main-upper-header-element-logo">
           <a href="index.html">
-              <img alt="Логотип ТЕХНОМАРТ"/>
+              <img src="img/logo.png" width="220" height="47" alt="Логотип ТЕХНОМАРТ" />
             </a>
         </li>
         <!-- ПОЛЕ ПОИСКА -->
         <li class="main-upper-header-element-search">
-          <form action="https://echo.htmlacademy.ru" method="post">
+          <img src="img/svg-technomart/icon-search.svg" width="71" height="71" alt="search" />
+          <form action="https://echo.htmlacademy.ru" method="get">
             <input type="text" name="search" placeholder="Поиск:">
           </form>
         </li>
         <!-- ЗАКЛАДКИ -->
         <li class="main-header-element-bookmarks">
+          <img src="img/svg-technomart/icon-bookmark.svg" width="58" height="67" alt="bookmark" />
           <a href="#">Закладки: 0</a>
         </li>
         <!-- КОРЗИНА -->
         <li class="main-header-element-basket">
+          <img src="img/svg-technomart/icon-cart.svg" width="63" height="63" alt="cart" />
           <a class="main-header-basket" href="#">Корзина: 10</a>
         </li>
         <!-- ОФОРМИТЬ ЗАКАЗ -->
@@ -46,6 +49,7 @@
       <!-- ТЕЛЕФОН МАГАЗИНА -->
       <div class="main-header-contacts">
         <div class="main-header-contact-phone">
+          <img src="img/svg-technomart/icon-phone.svg" width="71" height="79" alt="phone" />
           <a href="#">7 (812) 555-05-55</a>
         </div>
         <!-- АДРЕС МАГАЗИНА -->
@@ -56,7 +60,9 @@
       <!-- ВОЙТИ РЕГИСТРАЦИЯ -->
       <div class="main-header-user-navigation">
         <div class="main-header-user-navigation-menu main-header-user-authorized">
+          <img src="img/svg-technomart/icon-user.svg" width="83" height="75" />
           <a href="#">Равшан Джамшутович</a>
+          <img src="img/svg-technomart/icon-login.svg" width="83" height="71" />
         </div>
         <div class="main-header-user-navigation-authorized">
           <ul class="main-header-user-navigation-authorized-menu">
@@ -81,6 +87,17 @@
   </header>
 
   <main>
+    <div class="catalog-navigation">
+      <ul class="catalog-navigation-menu">
+        <img src="img/svg-technomart/icon-home.svg" width="63" height="50" alt="home" />
+        <img src="img/svg-technomart/icon-right-small.svg" width="33" height="50" alt="right-small"></src>
+        <li class="catalog-navigation-menu-catalog">Каталог</li>
+        <img src="img/svg-technomart/icon-right-small.svg" width="33" height="50" alt="right-small"></src>
+        <li class="catalog-navigation-menu-instrument">Инструмент</li>
+        <img src="img/svg-technomart/icon-right-small.svg" width="33" height="50" alt="right-small"></src>
+        <li class="catalog-navigation-menu-perforators">Перфораторы</li>
+      </ul>
+    </div>
     <div class="perforators">
       <h2>Перфораторы</h2>
     </div>
@@ -93,7 +110,9 @@
           <h2>ЦЕНА:</h2>
         </div>
         <div class="cost-range">
+          <img src="img/svg-technomart/filter-button.svg" width="83" height="96" alt="filter" />
           <input type="range" min="0" max="35000" step="1" value="500" />
+          <img src="img/svg-technomart/filter-button.svg" width="83" height="96" alt="filter" />
         </div>
         <div class="cost-minimal">
           <span>0</span>
@@ -109,14 +128,19 @@
         </div>
         <div class="producer-list">
           <input name="producer" type="radio" value="bosch" id="choice1" checked/>
+          <img src="img/svg-technomart/checkbox-on.svg" width="113" height="96" alt="on" />
           <label for="choice1">BOSCH</label>
           <input name="producer" type="radio" value="interskol" id="choice2" />
+          <img src="img/svg-technomart/checkbox-off.svg" width="96" height="96" alt="off" />
           <label for="choice2">Интерскол</label>
           <input name="producer" type="radio" value="makita" id="choice3" checked/>
+          <img src="img/svg-technomart/checkbox-on.svg" width="113" height="96" alt="on" />
           <label for="choice3">MAKITA</label>
           <input name="producer" type="radio" value="dewalt" id="choice4" />
+          <img src="img/svg-technomart/checkbox-off.svg" width="96" height="96" alt="off" />
           <label for="choice4">DEWALT</label>
           <input name="producer" type="radio" value="hitachi" id="choice5" />
+          <img src="img/svg-technomart/checkbox-off.svg" width="96" height="96" alt="off" />
           <label for="choice5">HITACHI</label>
         </div>
         <div class="supply-tag">
@@ -124,8 +148,10 @@
         </div>
         <div class="supply-list">
           <input name="supply" type="radio" value="battery" id="supply-choice1" checked/>
+          <img src="img/svg-technomart/radio-on.svg" width="104" height="104" alt="radio-on" />
           <label for="supply-choice1">АККУМУЛЯТРОНЫЕ</label>
           <input name="supply" type="radio" value="net" id="supply-choice2" />
+          <img src="img/svg-technomart/radio-off.svg" width="104" height="104" alt="radio-off" />
           <label for="supply-choice2">СЕТЕВЫЕ</label>
         </div>
         <input type="submit" value="ПОКАЗАТЬ" />
@@ -139,14 +165,15 @@
         <li><a href="#">ПО ФУНКЦИОНАЛУ</a></li>
       </ul>
       <ul class="sorting-by-controls">
-        <li><a href="#">СТРЕЛОЧКА ВВЕРХ</a></li>
-        <li><a href="#">СТРЕЛОЧКА ВНИЗ</a></li>
+        <li><a href="#"><img src="img/svg-technomart/icon-up-dir.svg" width="46" height="42" alt="up-dir"/></a></li>
+        <li><a href="#"><img src="img/svg-technomart/icon-down-dir.svg" width="46" height="42" alt="down-dir"/></a></li>
       </ul>
     </div>
     <section class="all-items">
       <ul class="all-items-list">
         <li class="item-list">
           <article class="item">
+            <img src="img/bfg3000.jpg" width="216" height="151" alt="bfg3000" />
             <h1><a href="#">Перфоратор BOSCH BFG 3000</a></h1>
             <span>22500 Р.</span>
             <a href="#">15500 Р.</a>
@@ -154,6 +181,7 @@
         </li>
         <li class="item-list">
           <article class="item">
+            <img src="img/bfg6000.jpg" width="216" height="151" alt="bfg6000" />
             <h1><a href="#">Перфоратор BOSCH BFG 6000</a></h1>
             <span>30500 Р.</span>
             <a href="#">25500 Р.</a>
@@ -161,6 +189,8 @@
         </li>
         <li class="item-list">
           <article class="item item-new">
+            <img src="img/new.png" width="60" height="59" alt="new" />
+            <img src="img/svg-technomart/icon-cart.svg" width="63" height="63" alt="cart" />
             <a href="#">КУПИТЬ</a>
             <a href="#">В ЗАКЛАДКИ</a>
             <h1><a href="#">Перфоратор BOSCH BFG 2000</a></h1>
@@ -169,6 +199,7 @@
         </li>
         <li class="item-list">
           <article class="item">
+            <img src="img/bfg3000.jpg" width="216" height="151" alt="bfg3000" />
             <h1><a href="#">Перфоратор BOSCH BFG 3000</a></h1>
             <span>22500 Р.</span>
             <a href="#">15500 Р.</a>
@@ -176,6 +207,8 @@
         </li>
         <li class="item-list">
           <article class="item item-new">
+            <img src="img/bfg6000.jpg" width="216" height="151" alt="bfg6000" />
+            <img src="img/new.png" width="60" height="59" alt="new" />
             <h1><a href="#">Перфоратор BOSCH BFG 6000</a></h1>
             <span>30500 Р.</span>
             <a href="#">25500 Р.</a>
@@ -183,12 +216,15 @@
         </li>
         <li class="item-list">
           <article class="item">
+            <img src="img/bfg2000.jpg" width="216" height="151" alt="bfg2000" />
             <h1><a href="#">Перфоратор BOSCH BFG 2000</a></h1>
             <a href="#">12500 Р.</a>
           </article>
         </li>
         <li class="item-list">
           <article class="item item-new">
+            <img src="img/bfg3000.jpg" width="216" height="151" alt="bfg3000" />
+            <img src="img/new.png" width="60" height="59" alt="new" />
             <h1><a href="#">Перфоратор BOSCH BFG 3000</a></h1>
             <span>22500 Р.</span>
             <a href="#">15500 Р.</a>
@@ -197,12 +233,14 @@
         <li class="item-list">
           <article class="item">
             <h1><a href="#">Перфоратор BOSCH BFG 6000</a></h1>
+            <img src="img/bfg6000.jpg" width="216" height="151" alt="bfg6000" />
             <span>30500 Р.</span>
             <a href="#">25500 Р.</a>
           </article>
         </li>
         <li class="item-list">
           <article class="item">
+            <img src="img/bfg2000.jpg" width="216" height="151" alt="bfg2000" />
             <h1><a href="#">Перфоратор BOSCH BFG 2000</a></h1>
             <a href="#">12500 Р.</a>
           </article>
@@ -231,7 +269,7 @@
     <div class="main-upper-footer">
       <!-- ЛОГОТИП ТЕХНОМАРТ -->
       <a href="index.html" class="main-header-logo">
-            <img alt="Логотип ТЕХНОМАРТ"/>
+            <img src="img/logo-bottom.png" width="220" height="68" alt="Логотип ТЕХНОМАРТ"/>
           </a>
       <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 <a href="#">+7 (812) 555-05-55</a></p>
       <ul class="main-footer-navigation">
@@ -252,9 +290,9 @@
       </div>
       <!-- СОЦИАЛЬНЫЕ СЕТИ -->
       <ul>
-        <li><a class="social-button" href="#">VK</a></li>
-        <li><a class="social-button" href="#">Facebook</a></li>
-        <li><a class="social-button" href="#">Instagram</a></li>
+        <li><img src="img/svg-technomart/icon-vk.svg" width="108" height="63" alt="VK"/><a class="social-button" href="#">VK</a></li>
+        <li><img src="img/svg-technomart/icon-fb.svg" width="50" height="92" alt="fb" /><a class="social-button" href="#">Facebook</a></li>
+        <li><img src="img/svg-technomart/icon-insta.svg" width="88" height="88" alt="Instagram"/><a class="social-button" href="#">Instagram</a></li>
       </ul>
       <div class="feedback">
         <p>Обратная связь:</p>
@@ -267,4 +305,5 @@
     </div>
   </footer>
 </body>
+
 </html>
