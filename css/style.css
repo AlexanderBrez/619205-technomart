@@ -1,0 +1,268 @@
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 17px;
+  line-height: 17px;
+  font-weight: 400;
+  color: #ffffff;
+  background-color: #ffffff;
+}
+a {
+  text-decoration: none;
+}
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 0px;
+  height: 0px;
+  margin: -1px;
+}
+.main-header-element-checkout {
+  background-color: #63a63e;
+}
+.main-header ul {
+  list-style: none;
+}
+.main-header a {
+  color: #ffffff;
+}
+.main-bottom-header {
+  background-color: #f3f7f9;
+}
+.main-upper-header {
+  background-color: #293449;
+}
+.main-header-name p {
+  font-style: italic;
+  font-size: 16px;
+  line-height: 23px;
+  font-weight: 400;
+  color: #ee3643;
+}
+.main-header-contact-phone {
+  border: solid 1px white;
+  padding-left: 74px;
+  padding-right: 52px;
+  padding-bottom: 12px;
+  padding-top: 12px;
+}
+.main-header-contact-phone a {
+  color: #ee3643;
+  font-size: 21px;
+  line-height: 21px;
+
+}
+.main-header-contact-address p {
+  font-size: 14px;
+  line-height: 24px;
+  color: #32425c;
+}
+.main-header-user-navigation-menu a {
+  font-size: 21px;
+  line-height: 21px;
+  color: #000000;
+  background-color: #ffffff;
+}
+.site-navigation {
+  background-color: #32425c;
+}
+.promo ul {
+  list-style: none;
+}
+.promo-items h3 {
+  font-size:24px;
+  line-height: 30px;
+}
+.promo-items p {
+  font-size: 14px;
+  line-height: 18px;
+}
+.promo-items li:first-child {
+  background-color: #ffbf47;
+}
+.promo-items li:nth-child(2) {
+  background-color: #3bbce3;
+}
+.promo-items li:nth-child(3) {
+  background-color: #dc91d8;
+}
+.promo-items li:nth-child(5) {
+  background-color: #8ed78f;
+}
+.promo-items li:last-child {
+  background-color: #ffc047;
+}
+.promo-item-materials p {
+  background-color: #e5ac40;
+}
+.promo-item-instruments p {
+  background-color: #35a9cc;
+}
+.promo-item-technics p{
+  background-color: #c682c2;
+}
+.promo-item-drills h3 {
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 700;
+}
+.promo-item-drills p {
+  font-size: 18px;
+  line-height: 24px;
+}
+.promo-item-drills a {
+  background-color: #ee3643;
+  font-size: 14px;
+  line-height: 18px;
+  color: #ffffff;
+}
+.promo-item-sales p {
+  background-color: #80c180;
+}
+.promo-item-delivery p {
+  background-color: #e5ac40;
+}
+.featured-header {
+  background-color: #f9f5f0;
+}
+.featured-header h2 {
+  font-size: 30px;
+  line-height: 30px;
+  color: #32425c;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+.featured-header a {
+  font-size: 14px;
+  line-height: 18px;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: 400;
+  background-color: #ee3643;
+}
+.item {
+  border: solid 1px #eaeaea;
+  font-family: "PT Sans", Arial, sans-serif;
+}
+.item-price {
+  font-size: 17px;
+  line-height: 18px;
+  color: #ffffff;
+  background-color: #ee3643;
+}
+.item span:not(:item-new) {
+  text-decoration: line-through;
+  color: #a9a9a9;
+  font-size: 17px;
+  line-height: 18px;
+}
+.item-name {
+  color: #000000;
+  font-size: 18px;
+  line-height: 20px;
+}
+.featured-producer {
+  border: solid 1px #eaeaea;
+}
+.featured-producer ul {
+  list-style: none;
+}
+.services {
+  background-color: #f4f8f9;
+  color: #000000;
+}
+.services p {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 13px;
+  line-height: 24px;
+}
+
+.services-intro h2{
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+.services-description-list h2 {
+  font-size: 36px;
+  line-height: 36px;
+  color: #32425c;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+.services-list {
+  font-size: 21px;
+  line-height: 30px;
+  background-color: #32425c;
+  font-weight: 700;
+}
+.services-list a {
+  color: #ffffff;
+}
+.about h2 {
+  font-size: 30px
+  line-height: 30px;
+  color: #000000;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+.about p {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 13px;
+  line-height: 24px;
+  color: #000000;
+  font-weight: 400;
+}
+.transfer-company p {
+  font-size: 18px;
+  line-height: 20px;
+  font-family: "Cuprum", Arial, sans-serif;
+}
+.company a {
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 18px;
+  background-color: #ee3643;
+  text-transform: uppercase;
+}
+.contacts a {
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 18px;
+  background-color: #ee3643;
+  text-transform: uppercase;
+}
+.main-upper-footer {
+  background-color: #32425c;
+  font-size: 18px;
+  line-height: 24px;
+  color: #ffffff;
+}
+.main-upper-footer ul {
+  list-style: none;
+}
+.main-bottom-footer {
+  font-size: 16px;
+  line-height: 18px;
+  background-color: #293449;
+}
+.main-bottom-footer ul {
+  list-style: none;
+}
+.bottom-list a {
+  color: #f5ca7e
+}
+.upper-list {
+  color: #ffffff;
+}
+.upper-list a {
+  color: #ffffff;
+}
+.feedback a {
+  color: #f5ca7e;
+}
+.developed-by a {
+  color: #f5ca7e;
+}
