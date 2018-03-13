@@ -48,11 +48,21 @@ a {
   padding-bottom: 12px;
   padding-top: 12px;
 }
+.main-header-basket {
+  background-color: #ee3643;
+}
 .main-header-contact-phone a {
   color: #ee3643;
   font-size: 21px;
   line-height: 21px;
-
+}
+.user-navigation-authorized-menu li {
+  font-size: 16px;
+  line-height: 18px;
+  text-decoration: underline;
+}
+.user-navigation-authorized-menu a {
+  color: #32425c;
 }
 .main-header-contact-address p {
   font-size: 14px;
@@ -149,6 +159,7 @@ a {
 .item-price {
   font-size: 17px;
   line-height: 18px;
+  font-weight: 700;
   color: #ffffff;
   background-color: #ee3643;
 }
@@ -265,4 +276,116 @@ a {
 }
 .developed-by a {
   color: #f5ca7e;
+}
+/* catalog */
+.catalog-navigation-menu {
+  font-size: 13px;
+  line-height: 18px;
+  font-family: "PT Sans", Arial, sans-serif;
+}
+.catalog-navigation-menu ul {
+  list-style: none;
+}
+.catalog-navigation-menu li {
+  text-transform: uppercase;
+}
+.catalog-navigation-menu a {
+  color: #000000;
+}
+.perforators {
+  background-color: #f2f6f8;
+}
+.perforators h2 {
+  font-size: 30px;
+  line-height: 30px;
+  color: #32425c;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+.controls {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  background-color: #f7f3ec;
+  color: #000000;
+}
+.cost-neutral span {
+  background-color: #ffffff;
+  color: #000000;
+}
+.filter {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 15px;
+  line-height: 20px;
+}
+.tags {
+  color: #000000;
+  font-size: 17px;
+  line-height: 30px;
+  font-weight: 700;
+}
+.sorting ul {
+  list-style: none;
+}
+.by-cost a {
+  color: #ee3643;
+}
+.by-type a,
+.by-functions a {
+  color: #c4c1bb;
+  border-bottom: dotted 1px #ee3643;
+}
+.submit-filter {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  background-color: #ffffff;
+  border: 1px solid #c4c1bb;
+}
+.producer-list,
+.supply-list {
+   font-size: 15px;
+   line-height: 20px;
+   color: #000000;
+   text-transform: uppercase;
+}
+ .all-items {
+   font-family: "PT Sans", Arial, sans-serif;
+}
+ .item-new {
+   font-size: 18px;
+   line-height: 20px;
+   font-weight: 700;
+   color: #000000;
+}
+ .item span:not(.new) {
+  font-size: 17px;
+  line-height: 18px;
+  font-weight: 700;
+  color: #a9a9a9;
+  text-decoration: line-through;
+}
+.page-number a {
+  font-size: 13px;
+  line-height: 18px;
+  color: #000000;
+}
+.page-number-1 {
+  background-color: #ee3643;
+}
+.about-catalog {
+  background-color: #f2f6f8;
+}
+.about-catalog p {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 13px;
+  line-height: 24px;
+  color: #000000;
+}
+.about-catalog h3 {
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 400;
+  color: #000000;
+  text-transform: uppercase;
 }
