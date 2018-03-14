@@ -48,7 +48,7 @@ a {
   padding-bottom: 12px;
   padding-top: 12px;
 }
-.main-header-basket {
+.main-header-basket-full {
   background-color: #ee3643;
 }
 .main-header-contact-phone a {
@@ -85,9 +85,11 @@ a {
   font-size:24px;
   line-height: 30px;
 }
-.promo-items p {
+.promo-items a {
   font-size: 14px;
   line-height: 18px;
+  color: #ffffff;
+  text-transform: uppercase;
 }
 .promo-items li:first-child {
   background-color: #ffbf47;
@@ -104,19 +106,14 @@ a {
 .promo-items li:last-child {
   background-color: #ffc047;
 }
-.promo-item-materials p {
-  background-color: #e5ac40;
-}
-.promo-item-instruments p {
-  background-color: #35a9cc;
-}
-.promo-item-technics p{
-  background-color: #c682c2;
-}
+
 .promo-item-drills h3 {
   font-size: 36px;
   line-height: 36px;
   font-weight: 700;
+}
+.promo-items a {
+  background-color: rgba(0, 0, 0, 0.1);
 }
 .promo-item-drills p {
   font-size: 18px;
@@ -127,12 +124,6 @@ a {
   font-size: 14px;
   line-height: 18px;
   color: #ffffff;
-}
-.promo-item-sales p {
-  background-color: #80c180;
-}
-.promo-item-delivery p {
-  background-color: #e5ac40;
 }
 .featured-header {
   background-color: #f9f5f0;
@@ -263,7 +254,7 @@ a {
   list-style: none;
 }
 .bottom-list a {
-  color: #f5ca7e
+  color: #f5ca7e;
 }
 .upper-list {
   color: #ffffff;
@@ -327,11 +318,7 @@ a {
 .sorting ul {
   list-style: none;
 }
-.by-cost a {
-  color: #ee3643;
-}
-.by-type a,
-.by-functions a {
+.sorting a:not(.up-dir):not(.down-dir) {
   color: #c4c1bb;
   border-bottom: dotted 1px #ee3643;
 }
@@ -365,6 +352,15 @@ a {
   color: #a9a9a9;
   text-decoration: line-through;
 }
+.item-buy-menu a:first-of-type:not(.item-new) {
+  background-color: #63a63e;
+  color: #ffffff;
+}
+.item-buy-menu a:nth-of-type(2) {
+  background-color: #ffffff;
+  color: #32425c;
+  border: solid 2px #63a63e;
+}
 .page-number a {
   font-size: 13px;
   line-height: 18px;
@@ -388,4 +384,104 @@ a {
   font-weight: 400;
   color: #000000;
   text-transform: uppercase;
+}
+/* styleguide */
+.main-upper-header-element-search:hover,
+.main-header-element-bookmarks:hover,
+.main-header-element-basket:hover {
+  background-color: #212a3a;
+}
+.main-header-element-checkout:hover {
+  background-color: #5fbb2d;
+}
+.main-header-element-bookmarks a:focus,
+.main-header-element-basket a:focus {
+  background-color: #161d29;
+}
+.main-header-element-checkout a:focus {
+  background-color: #518534;
+}
+
+.main-upper-header-element-search input:focus {
+  background-color: #ffffff;
+}
+.main-header-user-navigation-menu a:hover {
+  color: #ee3643;
+}
+.main-header-user-authorized a:hover {
+  color: #000000;
+}
+.user-navigation-authorized-menu a:hover {
+  color: #ee3643;
+}
+.user-navigation-authorized-menu a:focus,
+.main-header-user-navigation-menu a:focus {
+  color: #cacaca;
+}
+.site-navigation-menu a:hover {
+  background-color: #293449;
+}
+.site-navigation-menu a:focus {
+  background-color: #1d2739;
+}
+.promo-items a:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.promo-items a:focus {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.promo-item-drills a:hover {
+  background-color: #ca2c37;
+}
+.promo-items-drills a:focus {
+  background-color: #ba2732;
+}
+.item-buy-menu a:first-of-type:not(.item-new):hover {
+  background-color: #5fbb2d;
+}
+.item-buy-menu a:nth-of-type(2):hover {
+  border: solid 2px #32425c;
+}
+.item-buy-menu a:first-of-type:not(.item-new):focus {
+  background-color: #518534;
+}
+.item-buy-menu a:nth-of-type(2):focus {
+  color: #c1c6ce;
+  border: solid 2px #c1c6ce;
+}
+.featured-producer img:focus {
+  opacity: 0.2;
+}
+.sorting-by a:hover {
+  font-size: 50;
+}
+.sorting-by a:focus {
+  color: #ee3643;
+  border-bottom-style: none;
+}
+.services-list a:focus {
+  background-color: #ffffff;
+  color: #32425c;
+}
+.services-list a:hover {
+  background-color: #293449;
+}
+.upper-list a:hover {
+  border-bottom: solid 1px #ffffff;
+}
+.bottom-list a:hover {
+  border-bottom: solid 1px #f5ca7e;
+}
+.main-footer-navigation a:focus {
+  opacity: 0.5;
+  border-bottom: 0px;
+}
+.feedback a:hover,
+.developed-by a:hover {
+  border-bottom: solid 1px #f5ca7e;
+}
+.feedback a:focus,
+.developed-by a:focus {
+  color: #ee3643;
+  border-bottom: 0px;
 }
