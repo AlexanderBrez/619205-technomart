@@ -81,7 +81,7 @@ a {
   color: #000000;
   background-color: #ffffff;
 }
-.site-navigation {
+.site-navigation-menu {
   background-color: #32425c;
 }
 .promo ul {
@@ -112,6 +112,7 @@ a {
 .promo-items li:last-child {
   background-color: #ffc047;
 }
+/* Временно для сетки */
 .promo-items-drills img:nth-child(2),
 .promo-item-drills img:nth-child(3),
 .promo-item-drills img:last-child,
@@ -543,7 +544,7 @@ a {
 
 }
 .main-header-name {
-  width: 205px;
+  width: 195px;
   margin: 0;
   padding: 0;
 }
@@ -557,6 +558,20 @@ a {
   margin: 0;
   padding: 0;
 }
+.site-navigation-wrapper {
+  width: 100%;
+  background-color: #f3f7f9;
+  padding-bottom: 60px;
+}
+.site-navigation-menu {
+  width: 940px;
+  margin: 0 auto;
+  padding: 0;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
 .container {
   width: 100%;
   margin: 0;
@@ -566,36 +581,87 @@ a {
   flex-direction: column;
   align-items: center;
 }
-.promo {
-  padding: 500px;
+.promo-items {
   width: 940px;
   margin: 0;
   padding: 0;
-  margin-bottom: 53px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.promo-item-drills img:nth-child(2) {
+  display: block;
+}
+.promo-items li {
+  width: 300px;
 }
 .featured-items {
   width: 940px;
   margin: 0;
   padding: 0;
-  margin-bottom: 20px;
+}
+.featured-items-list {
+  width: 940px;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+/* Временно для сетки */
+.item-new img:nth-of-type(2),
+.item-new span {
+  display: none;
+}
+.item {
+  width: 220px;
 }
 .featured-producers {
   width: 940px;
   margin: 0;
   padding: 0;
-  margin-bottom: 85px;
 }
-.services-wrapper {
+.featured-producer-list {
   width: 940px;
-  margin: 0 auto;
-}
-.services {
-  width: 100%;
   margin: 0;
   padding: 0;
-  margin-bottom: 80px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.featured-producer {
+  width: 220px;
+}
+/* Временно для сетки */
+.services-description-guarantee,
+.services-description-credit {
+  display: none;
+}
+.services-wrapper {
+  width: 100%;
 
   background-color: #f4f7f9;
+}
+.services {
+  width: 940px;
+  margin: 0 auto;
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
+}
+.services-list {
+  width: 240px;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
 }
 .about {
   width: 940px;
