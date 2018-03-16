@@ -7,8 +7,14 @@ body {
   line-height: 17px;
   font-weight: 400;
   color: #ffffff;
-  background-color: #ffffff;
+  background-image: url('../img/technomart-index.jp');
+  background-size: 1200px auto;
+  background-repeat: no-repeat;
+  background-position: center top;
+
 }
+html { box-sizing: border-box; }
+*, *::before, *::after { box-sizing: inherit; }
 a {
   text-decoration: none;
 }
@@ -484,4 +490,85 @@ a {
 .developed-by a:focus {
   color: #ee3643;
   border-bottom: 0px;
+}
+/* flex */
+.main-header {
+  margin-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main-upper-header-wrapper {
+  width: 100%;
+  background-color: #293449;
+}
+.main-upper-header {
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: transparent;
+}
+.main-upper-header-elements {
+  width: 940px;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.main-bottom-header {
+  width: 940px;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.main-header-name {
+  margin: 0;
+  padding: 0;
+
+  width: 205px;
+}
+.main-header-contacts {
+  margin: 0;
+  padding: 0;
+
+  width: 270px;
+}
+.main-header-user-navigation {
+  margin: 0;
+  padding: 0;
+
+  width: 283px;
+}
+.site-navigation-menu {
+  width: 940px;
+  justify-content: space-around;
+  display: flex;
+  flex-direction: row;
+}
+/* Временно для сетки */
+.main-header,
+.main-upper-header,
+.main-upper-header-wrapper,
+.main-upper-header-elements,
+.main-bottom-header,
+.main-header-name,
+.main-header-contacts,
+.main-header-user-navigation,
+.site-navigation,
+.main-upper-header-element-logo,
+.main-upper-header-element-search,
+.main-header-element-bookmarks,
+.main-header-element-basket,
+.main-header-element-checkout,
+.site-navigation-menu li {
+  outline: 1px dashed lightgray;
 }
