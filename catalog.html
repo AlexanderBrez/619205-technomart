@@ -11,8 +11,8 @@
 <body>
   <header class="main-header">
     <!-- ВЕРХУШКА ШАПКИ -->
-    <div class="main-upper-header-wrapper">
-      <div class="main-upper-header">
+    <div class="main-upper-header">
+      <div class="main-upper-header-wrapper">
         <ul class="main-upper-header-elements">
           <!-- ЛОГОТИП -->
           <li class="main-upper-header-element-logo">
@@ -46,8 +46,8 @@
         </ul>
       </div>
     </div>
-    <div class="main-bottom-header-wrapper">
-      <div class="main-bottom-header">
+    <div class="main-bottom-header">
+      <div class="main-bottom-header-wrapper">
         <!-- ИНФОРМАЦИЯ О МАГАЗИНЕ -->
         <div class="main-header-name">
           <p>Интернет-магазин строительных материалов и инструментов для ремонта</p>
@@ -98,7 +98,7 @@
   <main class="container">
     <div class="catalog-navigation">
       <ul class="catalog-navigation-menu">
-        <a href="index.html"><span class="visually-hidden">Главная</span><img src="img/svg-technomart/icon-home.svg" width="15" height="12" alt="Главная" /></a>
+        <li class="catalog-navigation-menu-home"><a href="index.html"><span class="visually-hidden">Главная</span><img src="img/svg-technomart/icon-home.svg" width="15" height="12" alt="Главная" /></a></li>
         <img src="img/svg-technomart/icon-right-small.svg" width="8" height="12" alt="Далее"></src>
         <li class="catalog-navigation-menu-catalog"><a href="#">Каталог</a></li>
         <img src="img/svg-technomart/icon-right-small.svg" width="8" height="12" alt="Далее"></src>
@@ -284,8 +284,8 @@
         </div>
       </section>
     </div>
-    <div class="services-wrapper">
-      <div class="about-catalog">
+    <div class="about-catalog">
+      <div class="about-catalog-wrapper">
         <h3>ПАРА СЛОВ О ПЕРФОРАТОРАХ</h3>
         <p>
           Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.
@@ -297,14 +297,16 @@
   </main>
   <footer class="main-footer">
     <!-- ВЕРХУШКА ПОДВАЛА -->
-    <div class="main-upper-footer-wrapper">
-      <div class="main-upper-footer">
+    <div class="main-upper-footer">
+      <div class="main-upper-footer-wrapper">
         <!-- ЛОГОТИП ТЕХНОМАРТ -->
+        <div class="main-upper-footer-about">
         <a href="index.html" class="main-header-logo">
         <span class="visually-hidden">Логотип ТЕХНОМАРТ</span>
         <img src="img/logo-bottom.png" width="220" height="68" alt="Логотип ТЕХНОМАРТ" />
       </a>
         <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 <a class="upper-list" href="#">+7 (812) 555-05-55</a></p>
+      </div>
         <ul class="main-footer-navigation">
           <li class="upper-list"><a href="#">Компания</a></li>
           <li class="upper-list"><a href="#">Новости</a></li>
@@ -318,13 +320,13 @@
         </ul>
       </div>
     </div>
-    <div class="main-bottom-footer-wrapper">
-      <div class="main-bottom-footer">
+    <div class="main-bottom-footer">
+      <div class="main-bottom-footer-wrapper">
         <div class="main-bottom-footer-copyright">
           <p class="footer-copyright">© 2010–2017 Компания «Техномарт» Все права защищены</p>
         </div>
         <!-- СОЦИАЛЬНЫЕ СЕТИ -->
-        <ul>
+        <ul class="social">
           <li><img src="img/svg-technomart/icon-vk.svg" width="16" height="18" alt="VK" /><a class="social-button" href="#"><span class="visually-hidden">VK</span></a></li>
           <li><img src="img/svg-technomart/icon-fb.svg" width="16" height="18" alt="fb" /><a class="social-button" href="#"><span class="visually-hidden">Facebook</span></a></li>
           <li><img src="img/svg-technomart/icon-insta.svg" width="16" height="18" alt="Instagram" /><a class="social-button" href="#"><span class="visually-hidden">Instagram</span></a></li>
