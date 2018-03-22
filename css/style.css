@@ -18,6 +18,10 @@ html { box-sizing: border-box; }
 a {
   text-decoration: none;
 }
+img {
+  max-width: 100%;
+  height: auto;
+}
 .visually-hidden {
   position: absolute;
   clip: rect(0 0 0 0);
@@ -516,6 +520,7 @@ a {
   width: 100%;
 
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
 
@@ -528,22 +533,101 @@ a {
 
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
+}
+.main-upper-header-element-logo {
+  display: block;
+  width: 220px;
+  height: 42px;
+  margin: 0;
+  padding: 0;
 }
 .main-upper-header-element-search {
-  width: 240px;
+  position: relative;
+  margin: 0;
+  width: 270px;
 }
-.main-header-element-bookmarks {
+.main-upper-header-element-search input {
+  width: 220px;
+
+  background-color: #293449;
+  border: none;
+}
+.main-upper-header-element-search input::placeholder {
+  color: white;
+}
+.main-upper-header-element-search form {
+  padding: 10px 7px 0px 49px;
+
+  background-color: #293449;
+}
+.main-upper-header-element-search form::before {
+  content: "";
+
+  position: absolute;
+  width: 17px;
+  height: 18px;
+
+  top: 12px;
+  left: 17px;
+
+  background-image: url("../img/svg-technomart/icon-search.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+
+  opacity: 0.3;
+}
+.main-header-element-bookmarks a {
+  position: relative;
+  display: block;
   width: 140px;
-  padding: 15px;
+  padding: 12px 8px 10px 44px;
 }
-.main-header-element-basket {
+.main-header-element-bookmarks a::before {
+  content: "";
+
+  position: absolute;
+  width: 17px;
+  height: 18px;
+
+  top: 12px;
+  left: 17px;
+
+  background-image: url("../img/svg-technomart/icon-bookmark.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+
+  opacity: 0.3;
+}
+.main-header-element-basket a {
+  position: relative;
+  display: block;
   width: 140px;
-  padding: 15px;
+  padding: 12px 0px 10px 60px;
+  margin-right: 20px;
 }
-.main-header-element-checkout {
+.main-header-element-basket a::before {
+  content: "";
+
+  position: absolute;
+  width: 17px;
+  height: 18px;
+
+  top: 12px;
+  left: 28px;
+
+  background-image: url("../img/svg-technomart/icon-cart.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+
+  opacity: 0.3;
+}
+.main-header-element-checkout a {
+  display: block;
   width: 150px;
-  padding: 15px;
+  margin: 0;
+  padding: 0;
+  padding: 12px 18px 12px 21px;
 }
 .main-header-contact-phone {
   width: 268px;
@@ -567,11 +651,12 @@ a {
 }
 .main-header-name {
   width: 300px;
-  padding: 25px 40px 25px 60px;
+  padding: 28px 40px 25px 53px;
 }
 .main-header-contacts {
   width: 300px;
   padding: 25px 0px 0px 0px;
+  align-content: center;
 }
 .main-header-user-navigation {
   width: 300px;
@@ -1029,7 +1114,6 @@ a {
 .main-header-contacts,
 .main-header-user-navigation,
 .site-navigation,
-.main-upper-header-element-logo,
 .main-upper-header-element-search,
 .main-header-element-bookmarks,
 .main-header-element-basket,
