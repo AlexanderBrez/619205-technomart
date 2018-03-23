@@ -88,7 +88,8 @@ img {
 .promo ul {
   list-style: none;
 }
-.promo-items h3 {
+.promo-1 h3,
+.promo-2 h3 {
   font-size:24px;
   line-height: 30px;
 }
@@ -98,19 +99,19 @@ img {
   color: #ffffff;
   text-transform: uppercase;
 }
-.promo-items li:first-child {
+.promo-item-materials {
   background-color: #ffbf47;
 }
-.promo-items li:nth-child(2) {
+.promo-item-instruments {
   background-color: #3bbce3;
 }
-.promo-items li:nth-child(3) {
+.promo-item-technics {
   background-color: #dc91d8;
 }
-.promo-items li:nth-child(5) {
+.promo-item-sales {
   background-color: #8ed78f;
 }
-.promo-items li:last-child {
+.promo-item-delivery {
   background-color: #ffc047;
 }
 .promo-item-drills h3 {
@@ -633,7 +634,7 @@ img {
 }
 .main-header-name {
   width: 300px;
-  padding: 33px 40px 25px 51px;
+  padding: 33px 40px 25px 53px;
 }
 .main-header-contacts {
   padding: 46px 31px 0px 0px;
@@ -786,6 +787,10 @@ img {
   padding-bottom: 55px;
   padding-top: 60px;
 }
+.promo-items li {
+  margin: 0;
+  padding: 0;
+}
 .promo-items {
   width: 940px;
   margin: 0;
@@ -794,22 +799,255 @@ img {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  flex-wrap: wrap;
 }
-.promo-items li {
+.promo-1 {
+  width: 620px;
   margin: 0;
   padding: 0;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
-.promo-item-materials {
-  width: 300px;
-}
-/* временно для сетки */
-.slider-1 {
-  display: none;
+.promo-2 {
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
 }
 .slider-2 {
   width: 620px;
-  height: 266px;
+  min-width: 620px;
+  margin: 0;
+  padding: 0;
+  padding-top: 20px;
+  z-index: 1;
+}
+.slider-2::before {
+
+}
+.slider-1 {
+  width: 620px;
+  min-width: 620px;
+  margin: 0;
+  padding: 0;
+  padding-top: 20px;
+}
+.drills {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  z-index: 2;
+  bottom: 366px;
+  left: 506px;
+}
+.drills h3 {
+  display: block;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+}
+.drills p {
+  display: block;
+  margin: 0;
+  padding: 0;
+  padding-top: 1px;
+}
+.catalog {
+  display: block;
+  position: absolute;
+  margin: 0;
+  padding: 10px 45px 10px 51px;
+  width: 196px;
+  border-radius: 3px 3px;
+  z-index: 2;
+  bottom: 207px;
+  left: 506px;
+
+}
+.promo-item-materials .flag{
+  position:absolute;
+  top: 0px;
+  right: 0px;
+  width:60px;
+  height:60px;
+  text-indent:-1000px;
+  overflow:hidden;
+  z-index:20;
+}
+.promo-item-materials .flag-new{
+  background:url("../img/new.png") no-repeat 0 0;
+}
+.promo-item-materials {
+  position: relative;
+  width: 300px;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 10px;
+}
+.materials {
+  padding-bottom: 22px;
+}
+.materials-info {
+  margin: 0;
+  padding: 0;
+  padding-left: 23px;
+}
+.materials-info h3 {
+  display: block;
+  margin: 0;
+  padding: 20px 20px 14px 0px;
+}
+.materials-info h3::before {
+  content: "";
+
+  position: absolute;
+  width: 43px;
+  height: 65px;
+
+  top: 31px;
+  left: 213px;
+
+  background-image: url("../img/svg-technomart/icon-1.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+
+  opacity: 1;
+}
+.materials-info a {
+  display: block;
+  width: 136px;
+  margin: 0;
+  padding: 10px 22px 10px 24px;
+  border-radius: 2px 3px;
+  margin-left: 2px;
+}
+.promo-item-instruments {
+  position: relative;
+  width: 300px;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 10px;
+}
+.instruments {
+  padding-bottom: 22px;
+}
+.instruments {
+  margin: 0;
+  padding: 0;
+  padding-left: 22px;
+}
+.instruments h3 {
+  display: block;
+  margin: 0;
+  padding: 21px 20px 13px 0px;
+}
+.instruments h3::before {
+  content: "";
+
+  position: absolute;
+  width: 75px;
+  height: 61px;
+
+  top: 33px;
+  left: 197px;
+
+  background-image: url("../img/svg-technomart/icon-2.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+
+  opacity: 1;
+}
+.instruments a {
+  display: block;
+  width: 136px;
+  margin: 0;
+  padding: 10px 22px 10px 27px;
+  border-radius: 2px 3px;
+  margin-left: 2px;
+}
+.promo-item-technics {
+  position: relative;
+  width: 300px;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 10px;
+}
+.technics {
+  margin: 0;
+  padding: 0;
+  padding-left: 23px;
+  padding-bottom: 22px;
+}
+.technics h3 {
+  display: block;
+  margin: 0;
+  padding: 21px 20px 13px 0px;
+}
+.technics h3::before {
+  content: "";
+
+  position: absolute;
+  width: 78px;
+  height: 62px;
+
+  top: 31px;
+  left: 191px;
+
+  background-image: url("../img/svg-technomart/icon-3.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+
+  opacity: 1;
+}
+.technics a {
+  display: block;
+  width: 135px;
+  margin: 0;
+  padding: 10px 22px 10px 31px;
+  border-radius: 2px 3px;
+}
+.promo-item-sales {
+  position: relative;
+  width: 300px;
+  padding-bottom: 50px;
+}
+.sales {
+  padding-bottom: 30px;
+}
+.sales {
+  margin: 0;
+  padding: 0;
+  padding-left: 22px;
+}
+.sales h3 {
+  display: block;
+  margin: 0;
+  padding: 21px 20px 13px 0px;
+}
+.sales h3::before {
+  content: "";
+
+  position: absolute;
+  width: 59px;
+  height: 72px;
+
+  top: 33px;
+  left: 197px;
+
+  background-image: url("../img/svg-technomart/icon-4.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+
+  opacity: 1;
+}
+.sales a {
+  display: block;
+  width: 136px;
+  margin: 0;
+  padding: 10px 22px 10px 20px;
+  border-radius: 2px 3px;
+  margin-left: 2px;
 }
 .promo-items li {
   width: 300px;
@@ -1264,6 +1502,12 @@ img {
 .about-catalog-wrapper,
 .sorting-tag,
 .sorting,
-.controls {
+.controls,
+.promo-1,
+.promo-2,
+.promo-items,
+.materials-info,
+.materials-info h3,
+.materials-info a {
   outline: 1px dashed lightgray;
 }
