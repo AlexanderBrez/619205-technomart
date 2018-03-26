@@ -207,11 +207,11 @@ img {
 .services-list {
   font-size: 21px;
   line-height: 30px;
-  background-color: #32425c;
   font-weight: 700;
 }
 .services-list a {
   color: #ffffff;
+  background-color: #32425c;
 }
 .about h2 {
   font-size: 30px
@@ -494,6 +494,9 @@ img {
 .developed-by a:focus {
   color: #ee3643;
   border-bottom: 0px;
+}
+.services-list a:active {
+
 }
 /* flex */
 .main-header {
@@ -1185,11 +1188,6 @@ img {
   flex-direction: row;
   justify-content: space-between;
 }
-/* Временно для сетки */
-.item-new img:nth-of-type(2),
-.item-new span {
-  display: none;
-}
 .featured-item {
   padding: 20px 0px 20px 0px;
 }
@@ -1275,19 +1273,12 @@ img {
 .featured-producer-list img {
   margin: 0 auto;
 }
-/* Временно для сетки */
-.services-description-guarantee,
-.services-description-credit {
-  display: none;
-}
-.featured-producers {
-  padding-bottom: 0;
-  margin: 0;
-}
 .services-wrapper {
+  position: relative;
   width: 940px;
   margin: 0 auto;
   padding: 0;
+  padding-bottom: 95px;
 
   display: flex;
   flex-direction: column;
@@ -1296,25 +1287,75 @@ img {
   width: 100%;
   margin: 0 auto;
   padding: 0;
+  padding-bottom: 4px;
 
   background-color: #f4f7f9;
 }
 .services-more {
   width: 940px;
-  margin: 0 auto;
+  margin: 0;
   padding: 0;
 
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 }
 .services-description-delivery {
-  width: 620px;
+  width: 630px;
   margin: 0;
   padding: 0;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
-/* Временно для сетки */
-.services-description-list img:first-child {
+.delivery-image {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  width: 468px;
+  height: 261px;
+  min-width: 468px;
+  min-height: 261px;
+  padding-top: 22px;
+  z-index: 0;
+  right: 1px;
+  bottom: 18px;
+}
+.delivery-about {
+  margin: 0;
+  padding: 0;
+  width: 285px;
+  margin-top: -3px;
+  padding-left: 11px;
+}
+.delivery-about h2 {
+  margin: 0;
+  padding: 0;
+  padding-bottom: 13px;
+}
+.services-description-guarantee {
+  width: 630px;
+  margin: 0;
+  padding: 0;
   display: none;
+}
+.services-description-credit {
+  width: 630px;
+  margin: 0;
+  padding: 0;
+  display: none;
+}
+.services-intro {
+  width: 400px;
+  margin: 0;
+  padding: 0;
+  padding-top: 39px;
+  padding-bottom: 58px;
+}
+
+.services-intro h2 {
+  padding-bottom: 1px;
 }
 .about-catalog {
   width: 100%;
@@ -1323,12 +1364,36 @@ img {
 }
 .services-list {
   width: 240px;
-  max-height: 183px;
   margin: 0;
   padding: 0;
+  list-style: none;
 
   display: flex;
   flex-direction: column;
+}
+.services-list a {
+  position: relative;
+  display: block;
+  margin: 0;
+  padding: 12px 0px 18px 22px;
+  border-bottom: 1px solid #4d637b;
+}
+.services-list a:first-child::before {
+  content: "";
+
+  position: absolute;
+  width: 10px;
+  height: 272px;
+  z-index: 30;
+
+  left: 230px;
+  top: -35px;
+
+  background-image: url("../img/delimiter.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+
+  opacity: 1;
 }
 .about {
   width: 940px;
@@ -1374,9 +1439,23 @@ img {
   padding: 0;
 
   display: flex;
+  flex-direction: column;
+}
+.upper-navigation {
+  width: 550px;
+  display: flex;
   flex-direction: row;
   justify-content: space-between;
-  flex-wrap: wrap;
+}
+.bottom-navigation {
+  width: 530px;
+  padding-right: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.bottom-navigation li:not(:first-child) {
+  margin-left: 45px;
 }
 .main-footer-navigation li {
   width: 80px;
@@ -1636,7 +1715,7 @@ margin-bottom: 38px;
   padding: 15px;
 }
 
-/* Временно для сетки */
+/* Временно для сетки 
 .site-navigation-menu li,
 .site-navigation-menu li a,
 .main-header,
