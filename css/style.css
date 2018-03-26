@@ -459,9 +459,6 @@ img {
   color: #c1c6ce;
   border: solid 2px #c1c6ce;
 }
-.featured-producer img:focus {
-  opacity: 0.2;
-}
 .sorting-by a:hover {
   font-size: 50;
 }
@@ -1714,8 +1711,12 @@ margin-bottom: 38px;
 .pages-numbers li {
   padding: 15px;
 }
-
-/* Временно для сетки 
+.featured-producer:hover {
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 7px 30px 1px rgba(0,0,0,0.2)
+}
+/* Временно для сетки
 .site-navigation-menu li,
 .site-navigation-menu li a,
 .main-header,
