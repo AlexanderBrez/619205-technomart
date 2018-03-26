@@ -132,17 +132,20 @@ img {
   line-height: 18px;
   color: #ffffff;
 }
-.featured-header {
+.featured-header,
+.featured-header-producers {
   background-color: #f9f5f0;
 }
-.featured-header h2 {
+.featured-header h2,
+.featured-header-producers h2 {
   font-size: 30px;
   line-height: 30px;
   color: #32425c;
   text-transform: uppercase;
   font-weight: 400;
 }
-.featured-header a {
+.featured-header a,
+.featured-header-producers a {
   font-size: 14px;
   line-height: 18px;
   color: #ffffff;
@@ -1126,19 +1129,48 @@ img {
   justify-content: space-between;
   align-items: center;
 }
+.featured-header-producers {
+  width: 940px;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.featured-producer a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .featured-header.items h2 {
   display: block;
   padding-left: 28px;
   padding-bottom: 4px;
   padding-top: 3px;
 }
-.featured-header a {
+.featured-header-producers h2 {
+  display: block;
+  padding-left: 24px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+.featured-header.items a {
   display: block;
   width: 253px;
   margin: 0;
   padding: 11px 45px 9px 54px;
   border-radius: 3px 3px;
   margin-left: 373px;
+}
+.featured-header-producers a {
+  display: block;
+  width: 253px;
+  margin: 0;
+  padding: 10px 45px 10px 70px;
+  border-radius: 3px 3px;
+  margin-right: 24px;
 }
 .featured-items-list {
   width: 940px;
@@ -1149,6 +1181,11 @@ img {
   flex-direction: row;
   justify-content: space-between;
 }
+/* Временно для сетки */
+.item-new img:nth-of-type(2),
+.item-new span {
+  display: none;
+}
 .featured-item {
   padding: 20px 0px 20px 0px;
 }
@@ -1156,6 +1193,7 @@ img {
   width: 220px;
   margin: 0;
   padding: 0;
+  padding-bottom: 20px;
 }
 .item img {
   padding-top: 1px;
@@ -1194,10 +1232,11 @@ img {
   display:inline-block;
   width:218px;
   padding-right:20px;
-  padding-bottom:20px;
+  padding-bottom:40px;
   line-height:20px;
   font-weight: 700;
   text-align:center;
+  margin-bottom: 10px;
 }
 .item .title{
   min-height:40px;
@@ -1206,30 +1245,9 @@ img {
   margin-bottom:15px;
 }
 .item .discount{
-  min-height:20px;
-  margin-top:15px;
-  margin-bottom:10px;
   color:#999;
   text-decoration:line-through;
-}
-.featured-producers {
-  margin: 0;
-  padding: 0;
-}
-.featured-header.producers {
-  margin: 0;
-  padding: 0;
-
-  display: flex;
-  flex-direction: column;
-}
-.featured-header.producers h2 {
-  display: block;
-}
-.featured-header.producers a {
-  display: block;
-  padding: 0;
-  margin: 0;
+  padding-left: 10px;
 }
 .featured-producer-list {
   width: 940px;
@@ -1249,7 +1267,6 @@ img {
 .featured-producer-list img {
   margin: 0 auto;
 }
-
 /* Временно для сетки */
 .services-description-guarantee,
 .services-description-credit {
@@ -1482,21 +1499,24 @@ img {
   width: 220px;
   margin: 0;
   padding: 0;
+  padding-bottom: 20px;
 }
 .item .item-price {
   position:relative;
   width: 125px;
-  margin:10px auto;
-  padding: 10px 25px 10px 25px;
+  padding: 10px 0px 10px 14px;
   color: #ffffff;
   text-decoration: none;
   border-radius:3px;
+  margin-left: 42px;
 }
 .item .item-discount {
   display: block;
   margin: 0;
   padding: 0;
-  margin-bottom: 10px;
+  margin-top: -12px;
+  margin-left: 4px;
+  padding-bottom: 10px;
 }
 .item-price a {
   color: #ffffff;
@@ -1510,6 +1530,9 @@ img {
   height:0;
   border:19px solid white;
   border-left-color:#ee3643;
+}
+.item-price.no-discount {
+  margin-top: auto;
 }
 .image {
   margin: 0;
