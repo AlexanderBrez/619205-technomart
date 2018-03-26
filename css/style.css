@@ -1117,7 +1117,7 @@ img {
   width: 940px;
   margin: 0;
   padding: 0;
-  padding-bottom: 20px;
+  padding-bottom: 21px;
 }
 .featured-header.items {
   width: 940px;
@@ -1139,11 +1139,15 @@ img {
   justify-content: space-between;
   align-items: center;
 }
-.featured-producer a {
+.featured-producer  {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  height: 143px;
+  width: 220px;
 }
+.featured-producer a {
+  margin: auto;
+}
+
 .featured-header.items h2 {
   display: block;
   padding-left: 28px;
@@ -1252,18 +1256,22 @@ img {
 .featured-producer-list {
   width: 940px;
   margin: 0;
-  padding: 20px 0px 86px 0px;
+  padding: 20px 0px 66px 0px;
 
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap;
 }
-.featured-producer-list li {
-  width: 220px;
-  height: 143px;
+.featured-producer-list li:not(:nth-of-type(1)):not(:nth-of-type(5)) {
+  margin-left: 20px;
+  width: 218px;
   margin-bottom: 20px;
 }
+.featured-producer-list li {
+  height: 145px;
+}
+
 .featured-producer-list img {
   margin: 0 auto;
 }
@@ -1271,6 +1279,10 @@ img {
 .services-description-guarantee,
 .services-description-credit {
   display: none;
+}
+.featured-producers {
+  padding-bottom: 0;
+  margin: 0;
 }
 .services-wrapper {
   width: 940px;
@@ -1531,8 +1543,8 @@ img {
   border:19px solid white;
   border-left-color:#ee3643;
 }
-.item-price.no-discount {
-  margin-top: auto;
+.item-new .title{
+margin-bottom: 38px;
 }
 .image {
   margin: 0;
