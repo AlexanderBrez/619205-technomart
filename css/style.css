@@ -263,13 +263,10 @@ img {
 .main-bottom-footer ul {
   list-style: none;
 }
-.bottom-list a {
+.bottom-list  {
   color: #f5ca7e;
 }
 .upper-list {
-  color: #ffffff;
-}
-.upper-list a {
   color: #ffffff;
 }
 .feedback a {
@@ -473,10 +470,10 @@ img {
 .services-list a:hover {
   background-color: #293449;
 }
-.upper-list a:hover {
+.upper-list:hover {
   border-bottom: solid 1px #ffffff;
 }
-.bottom-list a:hover {
+.bottom-list:hover {
   border-bottom: solid 1px #f5ca7e;
 }
 .main-footer-navigation a:focus {
@@ -1436,7 +1433,7 @@ img {
 .main-upper-footer-wrapper {
   width: 940px;
   margin: 0 auto;
-  padding-bottom: 50px;
+  padding-bottom: 30px;
 
   display: flex;
   flex-direction: row;
@@ -1468,8 +1465,7 @@ img {
   justify-content: space-between;
 }
 .bottom-navigation {
-  width: 530px;
-  padding-right: 30px;
+  width: 550px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -1487,7 +1483,7 @@ img {
 
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 .main-bottom-footer {
   width: 100%;
@@ -1498,6 +1494,8 @@ img {
 }
 .main-header-logo {
   position: relative;
+  maargin: 0;
+  padding: 0;
 }
 .main-header-logo::before {
   content: "";
@@ -1509,11 +1507,17 @@ img {
   bottom: 0px;
   background-color: #b52933;
 }
-.social {
-  width: 150px;
+.footer-address {
   margin: 0;
-  margin-left: 140px;
-  padding: 30px;
+  padding: 0;
+  width: 330px;
+  padding-top: 8px;
+  padding-left: 2px;
+}
+.social {
+  width: 115px;
+  margin: 0;
+  padding: 0;
 
   display: flex;
   flex-direction: row;
@@ -1523,6 +1527,7 @@ img {
   width: 230px;
   margin: 0;
   padding: 0;
+  margin-right: 97px;
 }
 /* catalog */
 .catalog-navigation-menu {
@@ -1846,7 +1851,121 @@ margin-bottom: 38px;
   padding: 0;
   padding-top: 37px;
 }
-/* Временно для сетки */
+.upper-navigation-block {
+  width: 550px;
+  margin: 0;
+  padding: 0;
+}
+.upper-navigation {
+  padding-top: 38px;
+  padding-left: 2px;
+}
+.bottom-navigation {
+  padding-top: 34px;
+  padding-left: 22px;
+}
+.bottom-list:nth-child(1) {
+  padding-left: 3px;
+}
+.main-bottom-footer-copyright {
+  padding-top: 22px;
+}
+.social-button {
+  position: relative;
+}
+.image-vk {
+  position: relative;
+  width: 26px;
+  height: 15px;
+  z-index: 1;
+}
+.image-fb {
+  position: relative;
+  width: 12px;
+  height: 22px;
+  z-index: 1;
+}
+.image-insta {
+  position: relative;
+  width: 21px;
+  height: 21px;
+  z-index: 1;
+}
+.social {
+  margin-left: 68px;
+  margin-right: 130px;
+}
+.social li:first-child {
+  position: relative;
+  padding-top: 49px;
+  padding-left: 2px;
+}
+.social li:nth-child(2) {
+  position: relative;
+  padding-top: 46px;
+  margin-right: 2px;
+}
+.social li:nth-child(3) {
+  position: relative;
+  padding-top: 46px;
+}
+.social li:first-child::before {
+  position: absolute;
+  content: "";
+  width: 40px;
+	height: 40px;
+	background: #212a3a;
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+	border-radius: 20px;
+  z-index: 1;
+  top: 37px;
+  left: -5px;
+}
+.social li:nth-child(2)::before {
+  position: absolute;
+  content: "";
+  width: 40px;
+	height: 40px;
+	background: #212a3a;
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+	border-radius: 20px;
+  z-index: 1;
+  top: 37px;
+  left: -14px;
+}
+.social li:nth-child(3)::before {
+  position: absolute;
+  content: "";
+  width: 40px;
+	height: 40px;
+	background: #212a3a;
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+	border-radius: 20px;
+  z-index: 1;
+  top: 37px;
+  left: -9px;
+}
+.feedback,
+.feedback a,
+.feedback p,
+.developed-by,
+.developed-by a,
+.developed-by p {
+  margin: 0;
+  padding: 0;
+}
+.feedback {
+  padding-top: 38px;
+  margin-right: -10px;
+  margin-right: 53px;
+}
+.developed-by {
+  padding-top: 38px;
+}
+/* Временно для сетки */ /*
 .site-navigation-menu li,
 .site-navigation-menu li a,
 .main-header,
@@ -1897,6 +2016,11 @@ margin-bottom: 38px;
 .controls,
 .promo-1,
 .promo-2,
-.promo-items {
+.promo-items,
+.upper-navigation,
+.bottom-navigation,
+.upper-list,
+.upper-list a,
+.upper-navigation-block {
   outline: 1px dashed lightgray;
 }
