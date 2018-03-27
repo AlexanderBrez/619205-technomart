@@ -9,6 +9,15 @@
 </head>
 
 <body>
+  <script>
+var signin = document.querySelector(".sign-in");
+var popup = document.querySelector(".contacts-popup");
+
+signin.addEventListener("click", function (evt) {
+evt.preventDefault();
+popup.classList.add("contacts-popup");
+});
+</script>
   <header class="main-header">
     <!-- ВЕРХУШКА ШАПКИ -->
     <div class="main-upper-header">

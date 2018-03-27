@@ -528,11 +528,23 @@ img {
   justify-content: flex-start;
 }
 .main-upper-header-element-logo {
+  position: relative;
   display: block;
   width: 220px;
   height: 42px;
   margin: 0;
   padding: 0;
+}
+.main-upper-header-element-logo::before {
+  content: "";
+  position: absolute;
+  width: 220px;
+  height: 5px;
+
+  top: 42px;
+  left: 0px;
+
+  background-color: #b52933;
 }
 .main-upper-header-element-search {
   position: relative;
@@ -726,6 +738,7 @@ img {
   padding-bottom: 63px;
 }
 .site-navigation-menu {
+  position: relative;
   width: 940px;
   margin: 0 auto;
   padding: 0;
@@ -733,6 +746,16 @@ img {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
+}
+.site-navigation-menu::before {
+  content: "";
+
+  position: absolute;
+  width: 940px;
+  height: 5px;
+
+  top: 55px;
+  background-color: #293449;
 }
 .nav-main {
   display: block;
@@ -1473,6 +1496,19 @@ img {
 
   background-color: #293449;
 }
+.main-header-logo {
+  position: relative;
+}
+.main-header-logo::before {
+  content: "";
+
+  position: absolute;
+  width: 220px;
+  height: 5px;
+
+  bottom: 0px;
+  background-color: #b52933;
+}
 .social {
   width: 150px;
   margin: 0;
@@ -1716,7 +1752,101 @@ margin-bottom: 38px;
   border: none;
   box-shadow: 0 7px 30px 1px rgba(0,0,0,0.2)
 }
-/* Временно для сетки */ /*
+.about {
+  margin: 0;
+  padding: 0;
+  padding-top: 55px;
+  padding-left: 2px;
+}
+.company h2,
+.contacts h2 {
+  font-size: 30px;
+  line-height: 30px;
+}
+.contacts {
+  width: 380px;
+  margin: 0;
+  padding: 0;
+}
+.company-header {
+  width: 540px;
+  margin: 0;
+  padding: 0;
+}
+.company-main {
+  width: 390px;
+  margin: 0;
+  padding: 0;
+}
+.company-main p {
+  margin: 0;
+  padding: 0;
+  padding-top: 12px;
+  padding-bottom: 9px;
+}
+.transfer-companies {
+  margin: 0;
+  padding: 0;
+}
+.transfer-company p {
+  line-height: 20px;
+  font-size: 18px;
+}
+.transfer-company {
+  position: relative;
+  padding: 0;
+  padding-left: 36px;
+}
+.transfer-company::before {
+  content: "";
+
+  position: absolute;
+  width: 25px;
+  height: 2px;
+  background-color: #ee3643;
+
+  left: 0px;
+  bottom: 18px;
+}
+.company-more {
+  display: block;
+  width: 220px;
+  padding: 10px 25px 10px 41px;
+  margin-left: -2px;
+  border-radius: 3px 3px;
+}
+.company-bottom {
+  margin: 0;
+  padding: 0;
+  padding-top: 26px;
+  padding-bottom: 85px;
+}
+.contacts {
+  width: 300px;
+  padding: 0;
+  margin: 0;
+}
+.contacts-header {
+  width: 180px;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 18px;
+}
+.map img {
+  width: 300px;
+  height: 158px;
+}
+.pm-us a {
+  display: block;
+  width: 300px;
+  padding: 12px 40px 8px 65px;
+}
+.pm-us {
+  margin: 0;
+  padding: 0;
+  padding-top: 37px;
+}
+/* Временно для сетки */
 .site-navigation-menu li,
 .site-navigation-menu li a,
 .main-header,
