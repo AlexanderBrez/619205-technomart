@@ -9,15 +9,7 @@
 </head>
 
 <body>
-  <script>
-var signin = document.querySelector(".sign-in");
-var popup = document.querySelector(".contacts-popup");
-
-signin.addEventListener("click", function (evt) {
-evt.preventDefault();
-popup.classList.add("contacts-popup");
-});
-</script>
+  <!-- ШАПКА -->
   <header class="main-header">
     <!-- ВЕРХУШКА ШАПКИ -->
     <div class="main-upper-header">
@@ -27,14 +19,13 @@ popup.classList.add("contacts-popup");
           <li class="main-upper-header-element-logo">
             <a href="index.html">
             <span class="visually-hidden">Логотип ТЕХНОМАРТ</span>
-            <img src="img/logo.png" width="220" height="47" alt="Логотип ТЕХНОМАРТ" />
-          </a>
+            <img class="logo" src="img/logo.png" width="220" height="42" alt="Логотип ТЕХНОМАРТ" />
+            </a>
           </li>
           <!-- ПОЛЕ ПОИСКА -->
           <li class="main-upper-header-element-search">
             <form action="https://echo.htmlacademy.ru" method="get">
-              <span class="visually-hidden">Поиск</span>
-              <input type="text" name="search" placeholder="Поиск:">
+              <input type="text" name="search" id="search" placeholder="Поиск:">
             </form>
           </li>
           <!-- ЗАКЛАДКИ -->
@@ -43,7 +34,7 @@ popup.classList.add("contacts-popup");
           </li>
           <!-- КОРЗИНА -->
           <li class="main-header-element-basket">
-            <a class="main-header-basket-full" href="#">Корзина: 10</a>
+            <a class="main-header-basket" href="#">Корзина: 0</a>
           </li>
           <!-- ОФОРМИТЬ ЗАКАЗ -->
           <li class="main-header-element-checkout">
@@ -88,13 +79,13 @@ popup.classList.add("contacts-popup");
     <div class="site-navigation-wrapper">
       <nav class="site-navigation">
         <ul class="site-navigation-menu">
-          <li><a href="index.html">Главная</a></li>
-          <li><a href="#">Компания</a></li>
-          <li><a>Каталог</a></li>
-          <li><a href="#">Новости</a></li>
-          <li><a href="#">Спецпредложения</a></li>
-          <li><a href="#">Доставка</a></li>
-          <li><a href="#">Контакты</a></li>
+          <li><a class="nav-main" href="index.html">Главная</a></li>
+          <li><a class="nav-company" href="#">Компания</a></li>
+          <li><a class="nav-catalog" href="catalog.html">Каталог</a></li>
+          <li><a class="nav-news" href="#">Новости</a></li>
+          <li><a class="nav-offers" href="#">Спецпредложения</a></li>
+          <li><a class="nav-delivery" href="#">Доставка</a></li>
+          <li><a class="nav-contacts" href="#">Контакты</a></li>
         </ul>
       </nav>
     </div>
@@ -300,29 +291,38 @@ popup.classList.add("contacts-popup");
       </div>
     </div>
   </main>
+  <!-- ПОДВАЛ -->
   <footer class="main-footer">
     <!-- ВЕРХУШКА ПОДВАЛА -->
     <div class="main-upper-footer">
       <div class="main-upper-footer-wrapper">
         <!-- ЛОГОТИП ТЕХНОМАРТ -->
         <div class="main-upper-footer-about">
-        <a href="index.html" class="main-header-logo">
+          <div class="footer-logo">
+            <a class="main-header-logo">
         <span class="visually-hidden">Логотип ТЕХНОМАРТ</span>
         <img src="img/logo-bottom.png" width="220" height="63" alt="Логотип ТЕХНОМАРТ" />
-      </a>
-        <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 <a class="upper-list" href="#">+7 (812) 555-05-55</a></p>
-      </div>
-        <ul class="main-footer-navigation">
-          <li class="upper-list"><a href="#">Компания</a></li>
-          <li class="upper-list"><a href="#">Новости</a></li>
-          <li class="upper-list"><a href="catalog.html">Каталог</a></li>
-          <li class="upper-list"><a href="#">Доставка</a></li>
-          <li class="upper-list"><a href="#">Контакты</a></li>
-          <li class="bottom-list"><a href="#">Материалы</a></li>
-          <li class="bottom-list"><a href="#">Техника</a></li>
-          <li class="bottom-list"><a href="#">Инструмент</a></li>
-          <li class="bottom-list"><a href="#">Спецпредложения</a></li>
-        </ul>
+        </a>
+          </div>
+          <div class="footer-address">
+            <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 <a href="#" class="upper-list">+7 (812) 555-05-55</a></p>
+          </div>
+        </div>
+        <div class="main-footer-navigation">
+          <div class="upper-navigation">
+            <a class="upper-list" href="#">Компания</a>
+            <a class="upper-list" href="#">Новости</a>
+            <a class="upper-list" href="catalog.html">Каталог</a>
+            <a class="upper-list" href="#">Доставка</a>
+            <a class="upper-list" href="#">Контакты</a>
+          </div>
+          <div class="bottom-navigation">
+            <a class="bottom-list" href="#">Материалы</a>
+            <a class="bottom-list" href="#">Техника</a>
+            <a class="bottom-list" href="#">Инструмент</a>
+            <a class="bottom-list" href="#">Спецпредложения</a>
+          </div>
+        </div>
       </div>
     </div>
     <div class="main-bottom-footer">
@@ -332,9 +332,9 @@ popup.classList.add("contacts-popup");
         </div>
         <!-- СОЦИАЛЬНЫЕ СЕТИ -->
         <ul class="social">
-          <li><img src="img/svg-technomart/icon-vk.svg" width="16" height="18" alt="VK" /><a class="social-button" href="#"><span class="visually-hidden">VK</span></a></li>
-          <li><img src="img/svg-technomart/icon-fb.svg" width="16" height="18" alt="fb" /><a class="social-button" href="#"><span class="visually-hidden">Facebook</span></a></li>
-          <li><img src="img/svg-technomart/icon-insta.svg" width="16" height="18" alt="Instagram" /><a class="social-button" href="#"><span class="visually-hidden">Instagram</span></a></li>
+          <li><img class="image-vk" src="img/svg-technomart/icon-vk.svg" width="26" height="15" alt="VK" /><a class="social-button" href="#"><span class="visually-hidden">VK</span></a></li>
+          <li><img class="image-fb" src="img/svg-technomart/icon-fb.svg" width="12" height="22" alt="fb" /><a class="social-button" href="#"><span class="visually-hidden">Facebook</span></a></li>
+          <li><img class="image-insta" src="img/svg-technomart/icon-insta.svg" width="21" height="21" alt="Instagram" /><a class="social-button" href="#"><span class="visually-hidden">Instagram</span></a></li>
         </ul>
         <div class="feedback">
           <p>Обратная связь:</p>
