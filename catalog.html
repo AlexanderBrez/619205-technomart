@@ -34,8 +34,8 @@
             <a href="#">Закладки: 0</a>
           </li>
           <!-- КОРЗИНА -->
-          <li class="main-header-element-basket">
-            <a class="main-header-basket" href="#">Корзина: 0</a>
+          <li class="main-header-element-basket basket-full">
+            <a class="main-header-basket" href="#">Корзина: 10</a>
           </li>
           <!-- ОФОРМИТЬ ЗАКАЗ -->
           <li class="main-header-element-checkout">
@@ -63,14 +63,12 @@
         <!-- ВОЙТИ РЕГИСТРАЦИЯ -->
         <div class="main-header-user-navigation">
           <div class="main-header-user-navigation-menu main-header-user-authorized">
-            <img src="img/svg-technomart/icon-user.svg" width="20" height="18" alt="Пользователь" />
             <a href="#">Равшан Джамшутович</a>
-            <img src="img/svg-technomart/icon-login.svg" width="21" height="17" alt="Выйти" />
           </div>
           <div class="main-header-user-navigation-authorized">
             <ul class="user-navigation-authorized-menu">
-              <li><a href="#">Мои заказы</a></li>
-              <li><a href="#">Личный кабинет</a></li>
+              <li class="orders"><a href="#">Мои заказы</a></li>
+              <li class="cabinet"><a href="#">Личный кабинет</a></li>
             </ul>
           </div>
         </div>
@@ -82,7 +80,7 @@
         <ul class="site-navigation-menu">
           <li><a class="nav-main" href="index.html">Главная</a></li>
           <li><a class="nav-company" href="#">Компания</a></li>
-          <li><a class="nav-catalog" href="catalog.html">Каталог</a></li>
+          <li class="nav-catalog">Каталог</li>
           <li><a class="nav-news" href="#">Новости</a></li>
           <li><a class="nav-offers" href="#">Спецпредложения</a></li>
           <li><a class="nav-delivery" href="#">Доставка</a></li>
@@ -96,27 +94,24 @@
     <div class="catalog-navigation">
       <ul class="catalog-navigation-menu">
         <li class="catalog-navigation-menu-home"><a href="index.html"><span class="visually-hidden">Главная</span><img src="img/svg-technomart/icon-home.svg" width="15" height="12" alt="Главная" /></a></li>
-        <img src="img/svg-technomart/icon-right-small.svg" width="8" height="12" alt="Далее"></src>
         <li class="catalog-navigation-menu-catalog"><a href="#">Каталог</a></li>
-        <img src="img/svg-technomart/icon-right-small.svg" width="8" height="12" alt="Далее"></src>
         <li class="catalog-navigation-menu-instrument"><a href="#">Инструмент</a></li>
-        <img src="img/svg-technomart/icon-right-small.svg" width="8" height="12" alt="Далее"></src>
         <li class="catalog-navigation-menu-perforators"><a href="#">Перфораторы</a></li>
       </ul>
     </div>
     <div class="perforators">
       <h2>Перфораторы</h2>
     </div>
-    <div class="sorting controls">
-      <div class="filter-tag">
-        <span>ФИЛЬТР:</span>
+    <div class="all-sorting">
+      <div class="sorting-filter">
+        <span>ФИЛЬТР:<span>
       </div>
-      <div class="sorting-tag">
+      <div class="sorting-tag controls">
         <span>СОРТИРОВКА:</span>
         <ul class="sorting sorting-by">
-          <li><a href="#">ПО ЦЕНЕ</a></li>
-          <li><a href="#">ПО ТИПУ</a></li>
-          <li><a href="#">ПО ФУНКЦИОНАЛУ</a></li>
+          <li class="sorting-type cost"><a href="#">ПО ЦЕНЕ</a></li>
+          <li class="sorting-type type"><a href="#">ПО ТИПУ</a></li>
+          <li class="sorting-type func"><a href="#">ПО ФУНКЦИОНАЛУ</a></li>
         </ul>
         <ul class="sorting-by-controls sorting">
           <li><a href="#" class="up-dir"><span class="visually-hidden">По возрастанию</span><img src="img/svg-technomart/icon-up-dir.svg" width="11" height="10" alt="По возрастанию"/></a></li>
@@ -127,61 +122,60 @@
     <div class="main-container">
       <aside class="filter">
         <form action="https://echo.htmlacademy.ru" method="get">
-          <fieldset>
-            <div class="cost-tag">
-              <legend class="tags">ЦЕНА:</legend>
+          <div class="cost-tag tags">
+            ЦЕНА:
+          </div>
+          <div class="range-filter">
+          <div class="range-controls">
+            <div class="scale">
+              <div class="bar"></div>
             </div>
-            <div class="cost-range">
-              <img src="img/svg-technomart/filter-button.svg" width="20" height="23" alt="Минимум" />
-              <input type="range" min="0" max="35000" step="1" value="500" />
-              <img src="img/svg-technomart/filter-button.svg" width="20" height="23" alt="Максимум" />
-            </div>
-            <div class="cost-minimal controls">
-              <span>0</span>
-            </div>
-            <div class="cost-neutral">
-              <span>-</span>
-            </div>
-            <div class="cost-maximum controls">
-              <span>30000</span>
-            </div>
-          </fieldset>
-          <fieldset>
-            <div class="producer-tag">
-              <legend class="tags">ПРОИЗВОДИТЕЛИ:</legend>
-            </div>
-            <div class="producer-list">
-              <input name="bosch" type="checkbox" id="bosch" checked/>
-              <img src="img/svg-technomart/checkbox-on.svg" width="27" height="23" alt="Фильтр активен" />
+            <div class="toggle toggle-min"></div>
+            <div class="toggle toggle-max"></div>
+          </div>
+          <div class="price-controls">
+            <label class="min-price"><input name="min-price" type="text" value="0"></label>
+            <label class="max-price"><input name="max-price" type="text" value="30000"></label>
+          </div>
+          <div class="producer-tag tags">
+            ПРОИЗВОДИТЕЛИ:
+          </div>
+          <ul class="producer-list">
+            <li class="producer-option">
+              <input class="visually-hidden producer-input-checkbox" name="bosch" type="checkbox" id="bosch" checked/>
               <label for="bosch">BOSCH</label>
-              <input name="interskol" type="checkbox" id="interskol" />
-              <img src="img/svg-technomart/checkbox-off.svg" width="23" height="23" alt="Фильтр неактивен" />
+            </li>
+            <li class="producer-option">
+              <input class="visually-hidden producer-input-checkbox" name="interskol" type="checkbox" id="interskol" />
               <label for="interskol">Интерскол</label>
-              <input name="makita" type="checkbox" id="makita" checked/>
-              <img src="img/svg-technomart/checkbox-on.svg" width="27" height="23" alt="Фильтр активен" />
+            </li>
+            <li class="producer-option">
+              <input class="visually-hidden producer-input-checkbox" name="makita" type="checkbox" id="makita" checked/>
               <label for="makita">MAKITA</label>
-              <input name="dewalt" type="checkbox" id="dewalt" />
-              <img src="img/svg-technomart/checkbox-off.svg" width="23" height="23" alt="Фильтр неактивен" />
+            </li>
+            <li class="producer-option">
+              <input class="visually-hidden producer-input-checkbox" name="dewalt" type="checkbox" id="dewalt" />
               <label for="dewalt">DEWALT</label>
-              <input name="hitachi" type="checkbox" id="hitachi" />
-              <img src="img/svg-technomart/checkbox-off.svg" width="23" height="23" alt="Фильтр неактивен" />
+            </li>
+            <li class="producer-option">
+              <input class="visually-hidden producer-input-checkbox" name="hitachi" type="checkbox" id="hitachi" />
               <label for="hitachi">HITACHI</label>
-            </div>
-          </fieldset>
-          <fieldset>
-            <div class="supply-tag">
-              <legend class="tags">ПИТАНИЕ:</legend>
-            </div>
-            <div class="supply-list">
-              <input name="supply" type="radio" value="battery" id="supply-choice1" checked/>
-              <img src="img/svg-technomart/radio-on.svg" width="25" height="25" alt="Фильтр активен" />
+            </li>
+          </ul>
+          <div class="supply-tag tags">
+            ПИТАНИЕ:
+          </div>
+          <ul class="supply-list">
+            <li class="supply-option">
+              <input class="visually-hidden producer-input-radio" name="supply" type="radio" value="battery" id="supply-choice1" checked/>
               <label for="supply-choice1">АККУМУЛЯТРОНЫЕ</label>
-              <input name="supply" type="radio" value="net" id="supply-choice2" />
-              <img src="img/svg-technomart/radio-off.svg" width="25" height="25" alt="Фильтр неактивен" />
+            </li>
+            <li class="supply-option">
+              <input class="visually-hidden producer-input-radio" name="supply" type="radio" value="net" id="supply-choice2" />
               <label for="supply-choice2">СЕТЕВЫЕ</label>
-            </div>
-            <input class="submit-filter" type="submit" value="ПОКАЗАТЬ" />
-          </fieldset>
+            </li>
+          </ul>
+          <input class="submit-filter" type="submit" value="ПОКАЗАТЬ" />
         </form>
       </aside>
       <section class="all-items">
@@ -300,7 +294,7 @@
         <!-- ЛОГОТИП ТЕХНОМАРТ -->
         <div class="main-upper-footer-about">
           <div class="footer-logo">
-            <a class="main-header-logo">
+            <a class="main-header-logo" href="index.html">
         <span class="visually-hidden">Логотип ТЕХНОМАРТ</span>
         <img src="img/logo-bottom.png" width="220" height="63" alt="Логотип ТЕХНОМАРТ" />
         </a>
