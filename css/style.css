@@ -1603,7 +1603,7 @@ img {
   padding: 10px 20px 10px 20px;
 }
 .sorting.sorting-by {
-  width: 380px;
+  width: 500px;
   margin: 0;
   padding: 10px 0px 10px 48px;
 
@@ -1750,6 +1750,7 @@ img {
   background-color: #f7f3ec;
 
   border-radius: 3px;
+
   margin-bottom: 10px;
   padding-top: 39px;
   padding-right: 20px;
@@ -1948,9 +1949,6 @@ margin-bottom: 38px;
 }
 .pages-numbers li:not(:first-child) {
   margin-left: 10px;
-}
-.pages-numbers li {
-  padding: 15px;
 }
 .featured-producer:hover {
   cursor: pointer;
@@ -2400,6 +2398,7 @@ margin-bottom: 38px;
   margin: 0;
   padding: 0;
   margin-top: -40px;
+  padding-bottom: 10px;
 }
 .page-number-1,
 .page-number-2,
@@ -2412,14 +2411,17 @@ margin-bottom: 38px;
   margin: 0;
   padding: 0;
 }
-.page-number {
+.page-number:not(.page-number-1) {
   border: 1px solid #e5e5e5;
+}
+.page-number-1 {
+  border: 1px solid #ee3643;
 }
 .about-catalog-wrapper p {
   margin-top: -4px;
 }
 .about-catalog {
-  padding-bottom: 6px;
+  padding-bottom: 5px;
 }
 .up-dir {
   margin-left: 20px;
@@ -2432,6 +2434,32 @@ margin-bottom: 38px;
 .down-dir {
   margin-left: 10px;
   padding: 0;
+}
+.cost {
+  margin-left: 70px;
+  margin-right: 45px;
+}
+.type {
+  margin-right: 40px;
+}
+.func {
+  margin-right: 10px;
+}
+.page-number {
+  display: block;
+  color: black;
+  padding: 9px 15px 9px 15px;
+  border-radius: 3px;
+  font-size: 13px;
+}
+.page-number-1 {
+  color: white;
+}
+.all-items-list {
+  padding-bottom: 54px;
+}
+.page-number-next {
+  padding: 9px 29px 9px 29px;
 }
 /* Временно для сетки */ /*
 .site-navigation-menu li,
