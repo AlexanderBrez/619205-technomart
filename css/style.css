@@ -1616,7 +1616,7 @@ img {
   border: none;
 }
 .sorting-by-controls {
-  width: 60px;
+  width: 100px;
   margin: 0;
   padding: 10px 20px 10px 20px;
 
@@ -1906,7 +1906,6 @@ margin-bottom: 38px;
   flex-wrap: wrap;
 }
 .pages-numbers {
-  width: 285px;
   margin: 0;
   padding: 0;
   padding-bottom: 50px;
@@ -2407,6 +2406,7 @@ margin-bottom: 38px;
 .page-number-3 {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 .page-number-1 a {
   margin: 0;
@@ -2414,6 +2414,24 @@ margin-bottom: 38px;
 }
 .page-number {
   border: 1px solid #e5e5e5;
+}
+.about-catalog-wrapper p {
+  margin-top: -4px;
+}
+.about-catalog {
+  padding-bottom: 6px;
+}
+.up-dir {
+  margin-left: 20px;
+  padding: 0;
+}
+.up {
+  color: #ee3643;
+  fill: #ee3643;
+}
+.down-dir {
+  margin-left: 10px;
+  padding: 0;
 }
 /* Временно для сетки */ /*
 .site-navigation-menu li,
