@@ -1496,6 +1496,10 @@ img {
   padding: 12px 0px 18px 22px;
   border-bottom: 1px solid #4d637b;
 }
+.services-list a:first-child {
+  background-color: #ffffff;
+  color: #32425c;
+}
 .services-list a:first-child::before {
   content: "";
 
@@ -1711,9 +1715,9 @@ img {
   flex-direction: row;
   justify-content: space-between;
 }
-.sorting-by .sorting-type:first-child a {
-  color: #ee3643;
-  border: none;
+.sorting-type.cost:focus,
+.sorting-type.cost:active {
+  color: #000000;
 }
 .sorting-by-controls {
   width: 100px;
@@ -2157,6 +2161,7 @@ margin-bottom: 38px;
   display: block;
   width: 300px;
   padding: 12px 40px 8px 65px;
+  border-radius: 3px;
 }
 .pm-us {
   margin: 0;
@@ -2411,7 +2416,8 @@ margin-bottom: 38px;
   font-weight:bold;
   text-align:center;
 }
-.catalog-item .actions{
+.catalog-item .actions,
+.item .actions {
   display:none;
 }
 .actions .buy {
@@ -2480,7 +2486,8 @@ margin-bottom: 38px;
   border:19px solid white;
   border-left-color:#ee3643;
 }
-.catalog-item .actions{
+.catalog-item .actions,
+.item .actions {
   position:absolute;
   top:0;
   left:0;
@@ -2514,10 +2521,12 @@ margin-bottom: 38px;
   background:white;
   border-bottom-color:#63a63e;
 }
-.catalog-item .actions{
+.catalog-item .actions,
+.item .actions{
   display:none;
 }
-.catalog-item:hover .actions{
+.catalog-item:hover .actions,
+.item:hover .actions{
   display:block;
 }
 .catalog-item:hover {
@@ -2687,6 +2696,21 @@ margin-bottom: 38px;
   border-radius: 3px;
   color: #000000;
 }
+.client-name input:focus,
+.client-email input:focus,
+.client-letter textarea:focus,
+.client-name input:active,
+.client-email input:active,
+.client-letter textarea:active {
+  border-color: #ee3643;
+  outline: none;
+}
+.client-name input:hover,
+.client-email input:hover,
+.client-letter textarea:hover {
+  border-color: #b5b5b5;
+  outline: none;
+}
 .client-name label,
 .client-email label,
 .client-letter label {
@@ -2839,4 +2863,10 @@ margin-bottom: 38px;
 }
 .page-number-1 {
   color: #000000;
+}
+.cost a:hover {
+  color: #000000;
+}
+.contacts-popup-footer button {
+  cursor: pointer;
 }
