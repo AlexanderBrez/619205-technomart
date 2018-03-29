@@ -2387,6 +2387,9 @@ margin-bottom: 38px;
 .catalog-item:hover .actions{
   display:block;
 }
+.catalog-item:hover {
+  box-shadow: 0 7px 30px 1px rgba(0,0,0,0.2)
+}
 .catalog-image {
   margin-top: 2px;
   margin-bottom: 27px;
@@ -2461,62 +2464,178 @@ margin-bottom: 38px;
 .page-number-next {
   padding: 9px 29px 9px 29px;
 }
-/* Временно для сетки */ /*
-.site-navigation-menu li,
-.site-navigation-menu li a,
-.main-header,
-.main-upper-header,
-.main-upper-header-wrapper,
-.main-upper-header-elements,
-.main-bottom-header,
-.main-header-name,
-.main-header-contacts,
-.main-header-user-navigation,
-.site-navigation,
-.main-upper-header-element-search,
-.main-header-element-bookmarks,
-.main-header-element-basket,
-.main-header-element-checkout,
-.site-navigation-menu li,
-.container,
-.promo,
-.featured-producers,
-.services,
-.about,
-.main-footer,
-.main-upper-footer,
-.main-upper-footer-wrapper,
-.main-footer-navigation,
-.main-bottom-footer,
-.main-bottom-footer-wrapper,
-.main-bottom-footer-copyright,
-.social,
-.feedback,
-.developed-by,
-.container,
-.catalog-navigation-menu,
-.perforators,
-.filter,
-.producer-tag,
-.producer-list,
-.supply-tag,
-.supply-list,
-.sorting,
-.sontrols,
-.all-items,
-.pages-controls,
-.about-catalog,
-.about-catalog-wrapper,
-.sorting-tag,
-.sorting,
-.controls,
-.promo-1,
-.promo-2,
-.promo-items,
-.upper-navigation,
-.bottom-navigation,
-.upper-list,
-.upper-list a,
-.upper-navigation-block {
-  outline: 1px dashed lightgray;
+.map-popup {
+  position: relative;
+  width: 940px;
+  height: 446px;
+  padding: 0;
+  margin: 0 auto;
+  box-shadow: 0 0px 20px 5px rgba(0,0,0,0.2)
+}
+.map-popup-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.contacts-popup {
+  position: relative;
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #000000;
+  width: 620px;
+  border-top: 8px solid #ff5357;
+  margin: 0 auto;
+  padding: 0;
+  box-shadow: 0 20px 30px 15px rgba(0,0,0,0.2)
+}
+.contacts-popup form {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+.client-about {
+  margin: 0;
+  padding: inherit;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.client-name {
+  margin: 0;
+  padding: 0;
+  padding-top: 45px;
+  padding-left: 80px;
+  margin-right: 20px;
+
+  display: flex;
+  flex-direction: column;
+}
+.client-email {
+  margin: 0;
+  padding: 0;
+  padding-top: 45px;
+
+  display: flex;
+  flex-direction: column;
+}
+.client-letter {
+  margin: 0;
+  padding: 0;
+  padding-left: 80px;
+  padding-top: 20px;
+  padding-bottom: 37px;
+  color: #000000;
+
+  display: flex;
+  flex-direction: column;
+}
+.client-name input[type=text],
+.client-email input[type=text],
+.client-letter [placeholder] {
+  color: #000000;
+}
+.client-name input,
+.client-email input {
+  width: 216px;
+}
+.client-letter textarea {
+  width: 456px;
+}
+.client-name input,
+.client-email input,
+.client-letter textarea  {
+  border: 2px solid #dee3e4;
+  border-radius: 3px;
+  color: #000000;
+}
+.client-name label,
+.client-email label,
+.client-letter label {
+  padding-bottom: 8px;
+}
+.contacts-popup input,
+.contacts-popup textarea {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  font-size: 400;
+  color: #a9a9a9;
+  padding-left: 12px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+.client-letter textarea[placeholder] {
+  padding-bottom: 50px;
+}
+.contacts-popup-footer {
+  background-color: #f4f4f4;
+  padding-top: 35px;
+  padding-bottom: 35px;
+}
+.contacts-popup-footer button {
+  width: 460px;
+  margin-left: 80px;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 18px;
+  color: white;
+  background-color: #ee3643;
+  border: none;
+  border-radius: 3px;
+  padding: 10px 196px 10px 196px;
+}
+.contacts-popup-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.cart-popup {
+  position: relative;
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #000000;
+  width: 620px;
+  border-top: 8px solid #ff5357;
+  margin: 0 auto;
+  padding: 0;
+  box-shadow: 0 20px 30px 15px rgba(0,0,0,0.2)
+
+  display: flex;
+  flex-direction: column;
+}
+.cart-popup-actions {
+  width: 620px;
+  font-size: 14px;
+  line-height: 18px;
+  font-family: "Cuprum", Arial, sans-serif;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.confirmed {
+  position: relative;
+  padding-top: 70px;
+  text-align: center;
+  font-size: 30px;
+  line-height: 30px;
+}
+.confirmed::before {
+  content: "";
+
+  position: absolute;
+  width: 17px;
+  height: 18px;
+
+  top: 12px;
+  left: 17px;
+
+  background-image: url("../img/svg-technomart/icon-search.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+
 }

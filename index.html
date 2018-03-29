@@ -308,27 +308,9 @@
           <p>Вы можете забрать товар сами, заехав в наш офис:</p>
         </div>
         <div class="map"><img class="map" src="img/map.jpg" width="300" height="158" alt="Маленькая карта" /></div>
-        <div class="visually-hidden map-popup">
-          <img src="img/map_popup.jpg" width="940" height="446" alt="Большая карта" />
-          <a href="#"><img src="img/svg-technomart/form-2.svg" width="21" height="21" alt="Закрыть" /><span class="visually-hidden">Закрыть</span></a>
-        </div>
         <div class="pm-us">
           <a href="#">Заблудились? Напишите нам!</a>
         </div>
-      </div>
-      <div class="contacts-popup visually-hidden">
-        <form action="https://echo.htmlacademy.ru" method="get">
-          <label for="uname">Ваше имя:</label>
-          <input type="text" id="uname" name="name" placeholder="Представьтесь, пожалуйста" />
-          <label for="email">Ваш e-mail:</label>
-          <input type="text" id="uemail" name="email" placeholder="Для отправки ответа" />
-          <p>
-            <label for="utext">Текст письма:</label>
-            <input type="textarea" rows="5" cols="50" id="utext" name="text" placeholder="В свободной форме" />
-            <button type="submit">Отправить</button>
-          </p>
-          <a href="#"><img src="img/svg-technomart/form-2.svg" width="21" height="21" alt="Закрыть" /><span class="visually-hidden">Закрыть</span></a>
-        </form>
       </div>
     </section>
   </main>
@@ -388,6 +370,36 @@
       </div>
     </div>
   </footer>
+  <div class="map-popup">
+    <img src="img/map_popup.jpg" width="940" height="446" alt="Большая карта" />
+    <div class="map-popup-close">
+      <a href="#"><img src="img/svg-technomart/form-2.svg" width="21" height="21" alt="Закрыть" /><span class="visually-hidden">Закрыть</span></a>
+    </div>
+  </div>
+  <section class="contacts-popup">
+    <form action="https://echo.htmlacademy.ru" method="get">
+      <div class="client-about">
+        <div class="client-name">
+          <label for="uname">Ваше имя:</label>
+          <input type="text" id="uname" name="name" placeholder="Представьтесь, пожалуйста" />
+        </div>
+        <div class="client-email">
+          <label for="uemail">Ваш e-mail:</label>
+          <input type="text" id="uemail" name="email" placeholder="Для отправки ответа" />
+        </div>
+      </div>
+      <div class="client-letter">
+        <label for="utext">Текст письма:</label>
+        <textarea id="utext" name="text" placeholder="В свободной форме" rows="5"></textarea>
+      </div>
+      <div class="contacts-popup-footer">
+        <button type="submit">Отправить</button>
+      </div>
+      <div class="contacts-popup-close">
+        <a href="#"><img src="img/svg-technomart/form-2.svg" width="21" height="21" alt="Закрыть" /><span class="visually-hidden">Закрыть</span></a>
+      </div>
+    </form>
+  </section>
 </body>
 
 </html>
