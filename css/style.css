@@ -328,10 +328,6 @@ img {
 .sorting ul {
   list-style: none;
 }
-.sorting-type a:not(.up-dir):not(.down-dir) {
-  color: #c4c1bb;
-  border-bottom: dotted 1px #ee3643;
-}
 .submit-filter {
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
@@ -1715,10 +1711,6 @@ img {
   flex-direction: row;
   justify-content: space-between;
 }
-.sorting-type.cost:focus,
-.sorting-type.cost:active {
-  color: #000000;
-}
 .sorting-by-controls {
   width: 100px;
   margin: 0;
@@ -2326,16 +2318,17 @@ margin-bottom: 38px;
   background-color: #ee3643;
 }
 .main-header-user-authorized {
+  position: relative;
   padding-top: 46px;
   padding-left: 2px;
   width: 500px;
 }
-.main-header-user-authorized a {
+.main-header-user-authorized a:not(.logout) {
   position: relative;
   display: block;
   padding: 12px 70px 12px 45px;
 }
-.main-header-user-authorized a::before {
+.main-header-user-authorized a:not(.logout)::before {
   content: "";
 
   position: absolute;
@@ -2346,22 +2339,6 @@ margin-bottom: 38px;
   left: 13px;
 
   background-image: url("../img/svg-technomart/icon-user.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-
-  opacity: 1;
-}
-.main-header-user-authorized a::after {
-  content: "";
-
-  position: absolute;
-  width: 21px;
-  height: 17px;
-
-  top: 14px;
-  right: 12px;
-
-  background-image: url("../img/svg-technomart/icon-logout.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
 
@@ -2864,9 +2841,32 @@ margin-bottom: 38px;
 .page-number-1 {
   color: #000000;
 }
-.cost a:hover {
-  color: #000000;
-}
 .contacts-popup-footer button {
+  cursor: pointer;
+}
+.contacts-popup,
+.map-popup,
+.cart-popup {
+  display: none;
+}
+.sorting-tag a:not(.up-dir):not(.down-dir) {
+color: #c4c1bb;
+border-bottom: dotted 1px #ee3643;
+}
+.sorting-tag a:not(.up-dir):not(.down-dir):hover {
+  color: #000000;
+  border-bottom: 1px solid #ee3643;
+}
+.sorting-tag a:active,
+.sorting-tag a:focus {
+  color: #ee3643;
+  border: none;
+}
+.logout {
+  position: absolute;
+  top: 60px;
+  right: 210px;
+}
+.catalog-price {
   cursor: pointer;
 }
