@@ -269,9 +269,9 @@
         </div>
         <div class="services-more">
           <div class="services-list">
-            <a href="#">Доставка</a>
-            <a href="#">Гарантия</a>
-            <a href="#">Кредит</a>
+            <a class="on service" href="#">Доставка</a>
+            <a class="off service" href="#">Гарантия</a>
+            <a class="off service" href="#">Кредит</a>
           </div>
           <div class="services-description-list">
             <div class="services-description-delivery">
@@ -344,7 +344,7 @@
         <div class="contacts-header">
           <p>Вы можете забрать товар сами, заехав в наш офис:</p>
         </div>
-        <div class="map"><img class="map" src="img/map.jpg" width="300" height="158" alt="Маленькая карта" /></div>
+        <div class="map"><a class="map-open" href="#"><img src="img/map.jpg" width="300" height="158" alt="Маленькая карта" /></a></div>
         <div class="pm-us">
           <a class="pm" href="#">Заблудились? Напишите нам!</a>
         </div>
@@ -419,11 +419,11 @@
         <div class="client-about">
           <div class="client-name">
             <label for="uname">Ваше имя:</label>
-            <input type="text" id="uname" name="name" placeholder="Представьтесь, пожалуйста" required/>
+            <input type="text" id="uname" name="name" placeholder="Представьтесь, пожалуйста"/>
           </div>
           <div class="client-email">
             <label for="uemail">Ваш e-mail:</label>
-            <input type="text" id="uemail" name="email" placeholder="Для отправки ответа" required/>
+            <input type="text" id="uemail" name="email" placeholder="Для отправки ответа"/>
           </div>
         </div>
         <div class="client-letter">
@@ -440,20 +440,40 @@
     </section>
   </div>
   <script>
-    var pm = document.querySelector(".pm");
-    var contactspopup = document.querySelector(".contacts-popup");
-    var contactsclose = contactspopup.querySelector(".contacts-popup-close-link");
-    var firstname = contactspopup.querySelector("[name=name]");
-    var form = contactspopup.querySelector("form");
-    pm.addEventListener("click", function(evt) {
-      evt.preventDefault();
-      contactspopup.classList.add("modal-show");
-      firstname.focus();
-    });
-    contactsclose.addEventListener("click", function(evt) {
-      evt.preventDefault();
-      contactspopup.classList.remove("modal-show");
-    });
+  var pm = document.querySelector(".pm");
+  var contactspopup = document.querySelector(".contacts-popup");
+  var contactsclose = contactspopup.querySelector(".contacts-popup-close-link");
+  var form = contactspopup.querySelector("form");
+  var username = contactspopup.querySelector("[name=name]");
+  var useremail = contactspopup.querySelector("[name=email]");
+  pm.addEventListener("click", function(evt) {
+    evt.preventDefault();
+    contactspopup.classList.add("modal-show");
+    username.focus();
+  });
+  contactsclose.addEventListener("click", function(evt) {
+    evt.preventDefault();
+    contactspopup.classList.remove("modal-show");
+    contactspopup.classList.remove("modal-error");
+  });
+  form.addEventListener("submit", function (evt) {
+    if (!username.value || !useremail.value) {
+         evt.preventDefault();
+         contactspopup.classList.remove("modal-error");
+         contactspopup.offsetWidth = contactspopup.offsetWidth;
+         contactspopup.classList.add("modal-error");
+         console.log("Нужно ввести логин и пароль");
+       }
+  });
+  window.addEventListener("keydown", function (evt) {
+   if (evt.keyCode === 27) {
+     evt.preventDefault();
+     if (contactspopup.classList.contains("modal-show")) {
+       contactspopup.classList.remove("modal-show");
+       contactspopup.classList.remove("modal-error");
+     }
+   }
+ });
   </script>
 </body>
 
