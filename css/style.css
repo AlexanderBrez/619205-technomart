@@ -1,7 +1,6 @@
 body {
   margin: 0;
   padding: 0;
-  position: relative;
 
   font-weight: 400;
   font-size: 17px;
@@ -2109,7 +2108,6 @@ img {
   line-height: 30px;
 }
 .contacts {
-  position: relative;
   width: 380px;
   margin: 0;
   padding: 0;
@@ -2962,8 +2960,8 @@ img {
   padding: 0;
   z-index: 50;
   position: fixed;
-  top: 30%;
-  left: 30%;
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%)
   font-weight: 400;
   font-size: 18px;
