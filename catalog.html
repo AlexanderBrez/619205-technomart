@@ -282,17 +282,17 @@
           </ul>
         </div>
       </section>
+    </div>
+    <div class="about-catalog">
+      <div class="about-catalog-wrapper">
+        <h3>ПАРА СЛОВ О ПЕРФОРАТОРАХ</h3>
+        <p>
+          Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.
+          <br /> Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный
+          молоток и ударная дрель.
+        </p>
       </div>
-      <div class="about-catalog">
-        <div class="about-catalog-wrapper">
-          <h3>ПАРА СЛОВ О ПЕРФОРАТОРАХ</h3>
-          <p>
-            Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.
-            <br /> Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный
-            молоток и ударная дрель.
-          </p>
-        </div>
-      </div>
+    </div>
   </main>
   <!-- ПОДВАЛ -->
   <footer class="main-footer">
@@ -350,15 +350,31 @@
       </div>
     </div>
   </footer>
-  <section class="cart-popup">
-    <div class="confirmed">Товар добавлен в корзину!</div>
-    <div class="cart-popup-actions">
-      <a href="#">Оформить заказ</a>
-      <a href="#">Продолжить покупки</a>
-    </div>
-    <div class="cart-popup-close">
-      <a href="#"><img src="img/svg-technomart/form-2.svg" width="21" height="21" alt="Закрыть"/><span class="visually-hidden">Закрыть</span></a>
-    </div>
-  </section>
+  <div class="popup">
+    <section class="cart-popup">
+      <div class="confirmed">Товар добавлен в корзину!</div>
+      <div class="cart-popup-actions">
+        <a href="#">Оформить заказ</a>
+        <a href="#">Продолжить покупки</a>
+      </div>
+      <div class="cart-popup-close">
+        <a class="cart-popup-close-link" href="#"><img src="img/svg-technomart/form-2.svg" width="21" height="21" alt="Закрыть"/><span class="visually-hidden">Закрыть</span></a>
+      </div>
+    </section>
+  </div>
+  <script>
+    var buy = document.querySelectorAll(".buy");
+    var cartpopup = document.querySelector(".cart-popup");
+    var cartclose = cartpopup.querySelector(".cart-popup-close-link");
+    buy.addEventListener("click", function(evt) {
+      evt.preventDefault();
+      cartpopup.classList.add("modal-show");
+    });
+    cartclose.addEventListener("click", function(evt) {
+      evt.preventDefault();
+      cartpopup.classList.remove("modal-show");
+    });
+  </script>
 </body>
+
 </html>

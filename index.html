@@ -346,7 +346,7 @@
         </div>
         <div class="map"><img class="map" src="img/map.jpg" width="300" height="158" alt="Маленькая карта" /></div>
         <div class="pm-us">
-          <a href="#">Заблудились? Напишите нам!</a>
+          <a class="pm" href="#">Заблудились? Напишите нам!</a>
         </div>
       </div>
     </section>
@@ -413,30 +413,48 @@
       <a href="#"><img src="img/svg-technomart/form-2.svg" width="21" height="21" alt="Закрыть" /><span class="visually-hidden">Закрыть</span></a>
     </div>
   </div>
-  <section class="contacts-popup">
-    <form action="https://echo.htmlacademy.ru" method="get">
-      <div class="client-about">
-        <div class="client-name">
-          <label for="uname">Ваше имя:</label>
-          <input type="text" id="uname" name="name" placeholder="Представьтесь, пожалуйста" />
+  <div class="popup">
+    <section class="contacts-popup">
+      <form action="https://echo.htmlacademy.ru" method="get">
+        <div class="client-about">
+          <div class="client-name">
+            <label for="uname">Ваше имя:</label>
+            <input type="text" id="uname" name="name" placeholder="Представьтесь, пожалуйста" required/>
+          </div>
+          <div class="client-email">
+            <label for="uemail">Ваш e-mail:</label>
+            <input type="text" id="uemail" name="email" placeholder="Для отправки ответа" required/>
+          </div>
         </div>
-        <div class="client-email">
-          <label for="uemail">Ваш e-mail:</label>
-          <input type="text" id="uemail" name="email" placeholder="Для отправки ответа" />
+        <div class="client-letter">
+          <label for="utext">Текст письма:</label>
+          <textarea id="utext" name="text" placeholder="В свободной форме" rows="5"></textarea>
         </div>
-      </div>
-      <div class="client-letter">
-        <label for="utext">Текст письма:</label>
-        <textarea id="utext" name="text" placeholder="В свободной форме" rows="5"></textarea>
-      </div>
-      <div class="contacts-popup-footer">
-        <button type="submit">Отправить</button>
-      </div>
-      <div class="contacts-popup-close">
-        <a href="#"><img src="img/svg-technomart/form-2.svg" width="21" height="21" alt="Закрыть" /><span class="visually-hidden">Закрыть</span></a>
-      </div>
-    </form>
-  </section>
+        <div class="contacts-popup-footer">
+          <button type="submit">Отправить</button>
+        </div>
+        <div class="contacts-popup-close">
+          <a class="contacts-popup-close-link" href="#"><img src="img/svg-technomart/form-2.svg" width="21" height="21" alt="Закрыть" /><span class="visually-hidden">Закрыть</span></a>
+        </div>
+      </form>
+    </section>
+  </div>
+  <script>
+    var pm = document.querySelector(".pm");
+    var contactspopup = document.querySelector(".contacts-popup");
+    var contactsclose = contactspopup.querySelector(".contacts-popup-close-link");
+    var firstname = contactspopup.querySelector("[name=name]");
+    var form = contactspopup.querySelector("form");
+    pm.addEventListener("click", function(evt) {
+      evt.preventDefault();
+      contactspopup.classList.add("modal-show");
+      firstname.focus();
+    });
+    contactsclose.addEventListener("click", function(evt) {
+      evt.preventDefault();
+      contactspopup.classList.remove("modal-show");
+    });
+  </script>
 </body>
 
 </html>

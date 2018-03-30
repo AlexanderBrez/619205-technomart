@@ -1,6 +1,7 @@
 body {
   margin: 0;
   padding: 0;
+  position: relative;
 
   font-weight: 400;
   font-size: 17px;
@@ -802,6 +803,7 @@ img {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
+  flex-wrap: wrap;
   width: 940px;
   margin: 0 auto;
   padding: 0;
@@ -2680,16 +2682,19 @@ img {
   right: 10px;
 }
 .contacts-popup {
-  position: relative;
-
+  position: absolute;
   width: 620px;
   margin: 0 auto;
   padding: 0;
+  z-index: 100;
+  top: 2480px;
+  left: 520px;
 
   font-weight: 400;
   font-size: 18px;
   line-height: 18px;
   color: #000000;
+  background-color: #ffffff;
 
   border-top: 8px solid #ff5357;
   box-shadow: 0 20px 30px 15px rgba(0,0,0,0.2);
@@ -2816,23 +2821,6 @@ img {
   top: 10px;
   right: 10px;
 }
-.cart-popup {
-  position: relative;
-
-  display: flex;
-  flex-direction: column;
-  width: 620px;
-  margin: 0 auto;
-  padding: 0;
-
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 18px;
-  color: #000000;
-
-  border-top: 8px solid #ff5357;
-  box-shadow: 0 20px 30px 15px rgba(0,0,0,0.2);
-}
 .cart-popup-actions {
   display: flex;
   flex-direction: row;
@@ -2940,11 +2928,6 @@ img {
 .contacts-popup-footer button {
   cursor: pointer;
 }
-.contacts-popup,
-.map-popup,
-.cart-popup {
-  display: none;
-}
 .sorting-tag a:not(.up-dir):not(.down-dir) {
   color: #c4c1bb;
 
@@ -2968,4 +2951,55 @@ img {
 }
 .catalog-price {
   cursor: pointer;
+}
+/* pop ups */
+.contacts-popup,
+.map-popup,
+.cart-popup {
+  display: none;
+}
+.popup {
+  overflow: hidden;
+  width:100%;
+  z-index: 10;
+}
+.contacts-popup {
+  position: absolute;
+  width: 620px;
+  margin: 0 auto;
+  padding: 0;
+  z-index: 20;
+  top: 2480px;
+  left: 520px;
+
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 18px;
+  color: #000000;
+  background-color: #ffffff;
+
+  border-top: 8px solid #ff5357;
+  box-shadow: 0 20px 30px 15px rgba(0,0,0,0.2);
+}
+.cart-popup {
+  position: absolute;
+
+  width: 620px;
+  margin: 0 auto;
+  padding: 0;
+  top: 500px;
+  left: 520px;
+
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 18px;
+  color: #000000;
+  background-color: #ffffff;
+  z-index: 20;
+
+  border-top: 8px solid #ff5357;
+  box-shadow: 0 20px 30px 15px rgba(0,0,0,0.2);
+}
+.modal-show {
+  display: block;
 }
