@@ -454,6 +454,7 @@ img {
 }
 .main-header-element-checkout a:active {
   background-color: #518534;
+  color: rgba(255, 255, 255, 0.5);
 }
 .main-header-user-navigation-menu a:hover {
   color: #ee3643;
@@ -2622,20 +2623,17 @@ img {
 .page-number-1,
 .page-number-2,
 .page-number-3 {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
-}
-.page-number:active {
-  color: #ffffff;
-
-  background-color: #ee3643;
 }
 .page-number:hover {
 border-color: #bdc6ca;
 }
+.page-number:active,
 .page-number:focus {
   border-color: #ee3643;
+  background-color: #ee3643;
+  color: #ffffff;
 }
 .page-number-1 a {
   margin: 0;
@@ -2655,11 +2653,6 @@ border-color: #bdc6ca;
 .up-dir {
   margin-left: 20px;
   padding: 0;
-}
-.up {
-  color: #ee3643;
-
-  fill: #ee3643;
 }
 .down-dir {
   margin-left: 10px;
@@ -3267,4 +3260,7 @@ border-color: #bdc6ca;
 .user:hover::before,
 .logout:hover::before {
   z-index: 1;
+}
+.page-active {
+  border-color: #ee3643;
 }
