@@ -131,8 +131,8 @@
               <div class="scale">
                 <div class="bar"></div>
               </div>
-              <div class="toggle toggle-min"></div>
-              <div class="toggle toggle-max"></div>
+              <div class="toggle toggle-min"><span class="visually-hidden">Минимальная цена</span></div>
+              <div class="toggle toggle-max"><span class="visually-hidden">Максимальная цена</span></div>
             </div>
             <div class="price-controls">
               <label class="min-price"><input name="min-price" type="text" value="0"></label>
@@ -350,29 +350,17 @@
       </div>
     </div>
   </footer>
-    <section class="cart-popup">
-      <div class="confirmed">Товар добавлен в корзину!</div>
-      <div class="cart-popup-actions">
-        <a href="#">Оформить заказ</a>
-        <a href="#">Продолжить покупки</a>
-      </div>
-      <div class="cart-popup-close">
-        <a class="cart-popup-close-link" href="#"><img src="img/svg-technomart/form-2.svg" width="21" height="21" alt="Закрыть"/><span class="visually-hidden">Закрыть</span></a>
-      </div>
-    </section>
-  <script>
-    var buy = document.querySelectorAll(".buy");
-    var cartpopup = document.querySelector(".cart-popup");
-    var cartclose = cartpopup.querySelector(".cart-popup-close-link");
-    buy.addEventListener("click", function(evt) {
-      evt.preventDefault();
-      cartpopup.classList.add("modal-show");
-    });
-    cartclose.addEventListener("click", function(evt) {
-      evt.preventDefault();
-      cartpopup.classList.remove("modal-show");
-    });
-  </script>
+  <section class="cart-popup">
+    <div class="confirmed">Товар добавлен в корзину!</div>
+    <div class="cart-popup-actions">
+      <a href="#">Оформить заказ</a>
+      <a href="#">Продолжить покупки</a>
+    </div>
+    <div class="cart-popup-close">
+      <a class="cart-popup-close-link" href="#"><img src="img/svg-technomart/form-2.svg" width="21" height="21" alt="Закрыть"/><span class="visually-hidden">Закрыть</span></a>
+    </div>
+  </section>
+<script src="js/popups.js"></script>
 </body>
 
 </html>

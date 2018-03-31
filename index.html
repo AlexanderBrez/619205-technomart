@@ -407,11 +407,13 @@
       </div>
     </div>
   </footer>
-  <div class="map-popup">
-    <img src="img/map_popup.jpg" width="940" height="446" alt="Большая карта" />
-    <div class="map-popup-close">
-      <a href="#"><img src="img/svg-technomart/form-2.svg" width="21" height="21" alt="Закрыть" /><span class="visually-hidden">Закрыть</span></a>
-    </div>
+  <div class="popup">
+    <section class="map-popup">
+<iframe src="https://snazzymaps.com/embed/60933" width="940" height="446" style="border:none;"></iframe>
+      <div class="map-popup-close">
+        <a class="map-close" href="#"><img src="img/svg-technomart/form-2.svg" width="21" height="21" alt="Закрыть" /><span class="visually-hidden">Закрыть</span></a>
+      </div>
+    </section>
   </div>
   <div class="popup">
     <section class="contacts-popup">
@@ -419,11 +421,11 @@
         <div class="client-about">
           <div class="client-name">
             <label for="uname">Ваше имя:</label>
-            <input type="text" id="uname" name="name" placeholder="Представьтесь, пожалуйста"/>
+            <input type="text" id="uname" name="name" placeholder="Представьтесь, пожалуйста" />
           </div>
           <div class="client-email">
             <label for="uemail">Ваш e-mail:</label>
-            <input type="text" id="uemail" name="email" placeholder="Для отправки ответа"/>
+            <input type="text" id="uemail" name="email" placeholder="Для отправки ответа" />
           </div>
         </div>
         <div class="client-letter">
@@ -439,42 +441,17 @@
       </form>
     </section>
   </div>
-  <script>
-  var pm = document.querySelector(".pm");
-  var contactspopup = document.querySelector(".contacts-popup");
-  var contactsclose = contactspopup.querySelector(".contacts-popup-close-link");
-  var form = contactspopup.querySelector("form");
-  var username = contactspopup.querySelector("[name=name]");
-  var useremail = contactspopup.querySelector("[name=email]");
-  pm.addEventListener("click", function(evt) {
-    evt.preventDefault();
-    contactspopup.classList.add("modal-show");
-    username.focus();
-  });
-  contactsclose.addEventListener("click", function(evt) {
-    evt.preventDefault();
-    contactspopup.classList.remove("modal-show");
-    contactspopup.classList.remove("modal-error");
-  });
-  form.addEventListener("submit", function (evt) {
-    if (!username.value || !useremail.value) {
-         evt.preventDefault();
-         contactspopup.classList.remove("modal-error");
-         contactspopup.offsetWidth = contactspopup.offsetWidth;
-         contactspopup.classList.add("modal-error");
-         console.log("Нужно ввести логин и пароль");
-       }
-  });
-  window.addEventListener("keydown", function (evt) {
-   if (evt.keyCode === 27) {
-     evt.preventDefault();
-     if (contactspopup.classList.contains("modal-show")) {
-       contactspopup.classList.remove("modal-show");
-       contactspopup.classList.remove("modal-error");
-     }
-   }
- });
-  </script>
+  <section class="cart-popup">
+    <div class="confirmed">Товар добавлен в корзину!</div>
+    <div class="cart-popup-actions">
+      <a href="#">Оформить заказ</a>
+      <a href="#">Продолжить покупки</a>
+    </div>
+    <div class="cart-popup-close">
+      <a class="cart-popup-close-link" href="#"><img src="img/svg-technomart/form-2.svg" width="21" height="21" alt="Закрыть"/><span class="visually-hidden">Закрыть</span></a>
+    </div>
+  </section>
+<script src="js/popups.js"></script>
 </body>
 
 </html>
