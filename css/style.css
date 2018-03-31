@@ -430,7 +430,8 @@ img {
 }
 /* styleguide */
 .main-header-element-bookmarks:hover,
-.main-header-element-basket:hover {
+.main-header-element-basket:hover,
+.main-upper-header-element-search:hover {
   background-color: #212a3a;
 }
 .main-header-element-bookmarks a:hover::before,
@@ -439,11 +440,10 @@ img {
   opacity: 1;
 }
 .main-header-element-bookmarks a:active::before,
-.main-header-element-basket a:active::before {
+.main-header-element-basket a:active::before,
+.main-header-element-basket a:active,
+.main-header-element-bookmarks a:active {
   opacity: 0.5;
-}
-.main-upper-header-element-search input:active {
-  background-color: #ffffff;
 }
 .main-header-element-checkout:hover {
   background-color: #5fbb2d;
@@ -610,18 +610,32 @@ img {
 }
 .main-upper-header-element-search {
   position: relative;
-
   width: 270px;
   margin: 0;
-}
-.main-upper-header-element-search input {
-  width: 220px;
-
-  background-color: #293449;
-  border: none;
+  padding: 0;
 }
 .main-upper-header-element-search input::placeholder {
   color: white;
+  padding-left: 48px;
+}
+.main-upper-header-element-search input {
+  top: -2px;
+  position: absolute;
+  height: 44px;
+  margin: 0;
+  padding: 0;
+  color: #000000;
+  width: 270px;
+  margin-left: -49px;
+  border: none;
+  background-color: #293449;
+}
+.main-upper-header-element-search input:hover {
+  background-color: #212a3a;
+}
+.main-upper-header-element-search input:active,
+.main-upper-header-element-search input:focus {
+  background-color: #ffffff;
 }
 .main-upper-header-element-search form {
   padding: 10px 7px 0 49px;
@@ -633,6 +647,7 @@ img {
   position: absolute;
   top: 12px;
   left: 17px;
+  z-index: 3;
 
   width: 17px;
   height: 18px;
@@ -778,10 +793,27 @@ img {
   background-position: 0 0;
   opacity: 1;
 }
-.sign-in a:hover::before {
-  opacity: 1;
+.sign-in a::after {
+  content: "";
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  z-index: -1;
 
-  fill: #32425c;
+  width: 21px;
+  height: 21px;
+
+  background-image: url("../img/icon-login-blue.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  opacity: 1;
+}
+.sign-in a:hover::after {
+  z-index: 2;
+}
+.sign-in a:focus::after,
+.sign-in a:active::after {
+  z-index: -2;
 }
 .sign-up {
   margin: 0;
@@ -2388,25 +2420,11 @@ img {
   padding-top: 46px;
   padding-left: 2px;
 }
-.main-header-user-authorized a:not(.logout) {
+.main-header-user-authorized a:not(.logout):not(.user) {
   position: relative;
 
   display: block;
   padding: 12px 70px 12px 45px;
-}
-.main-header-user-authorized a:not(.logout)::before {
-  content: "";
-  position: absolute;
-  top: 13px;
-  left: 13px;
-
-  width: 20px;
-  height: 18px;
-
-  background-image: url("../img/svg-technomart/icon-user.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  opacity: 1;
 }
 .user-navigation-authorized-menu {
   display: flex;
@@ -2586,6 +2604,7 @@ img {
 }
 .catalog-item:hover {
   box-shadow: 0 7px 30px 1px rgba(0,0,0,0.2);
+  border: none;
 }
 .catalog-image {
   margin-top: 2px;
@@ -3077,4 +3096,175 @@ border-color: #bdc6ca;
 }
 .google {
   position: absolute;
+}
+.up-dir {
+  position: relative;
+}
+.up-dir::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 0px;
+  z-index: -1;
+
+  width: 17px;
+  height: 18px;
+
+  background-image: url("../img/svg-technomart/icon-up-dir.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  opacity: 1;
+}
+.up-dir::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 0px;
+  z-index: -1;
+
+  width: 17px;
+  height: 18px;
+
+  background-image: url("../img/icon-up-dir-red.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  opacity: 1;
+}
+.up-dir:active::after,
+.up-dir:focus::after {
+  z-index: 2;
+}
+.up-dir:hover::before {
+  z-index: 1;
+}
+.down-dir {
+  position: relative;
+}
+.down-dir::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 0px;
+  z-index: -1;
+
+  width: 17px;
+  height: 18px;
+
+  background-image: url("../img/svg-technomart/icon-down-dir.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  opacity: 1;
+}
+.down-dir::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 0px;
+  z-index: -1;
+
+  width: 17px;
+  height: 18px;
+
+  background-image: url("../img/icon-down-dir-red.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  opacity: 1;
+}
+.up-dir:active::after,
+.up-dir:focus::after,
+.down-dir:focus::after,
+.down-dir:active::after {
+  z-index: 2;
+}
+.up-dir:hover::before,
+.down-dir:hover::before {
+  z-index: 1;
+}
+.user {
+  position: absolute;
+  top: 59px;
+  left: 15px;
+  margin: 0;
+  padding: 0;
+  width: 20px;
+}
+.user {
+  position: absolute;
+  left: 14px;
+}
+.user::before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  z-index: -1;
+
+  width: 20px;
+  height: 18px;
+
+  background-image: url("../img/icon-user-blue.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  opacity: 1;
+}
+.user::after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  z-index: -1;
+  top: 0px;
+
+  width: 20px;
+  height: 18px;
+
+  background-image: url("../img/svg-technomart/icon-user.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  opacity: 1;
+}
+.user:active::after,
+.user:focus::after {
+  z-index: 2;
+}
+.logout {
+  position: absolute;
+  left: 270px;
+  width: 21px;
+  height: 17px;
+}
+.logout::before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  z-index: -1;
+
+  width: 21px;
+  height: 17px;
+
+  background-image: url("../img/icon-logout-blue.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  opacity: 1;
+}
+.logout::after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  z-index: -1;
+  top: 0px;
+
+  width: 20px;
+  height: 18px;
+
+  background-image: url("../img/svg-technomart/icon-logout.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  opacity: 1;
+}
+.logout:active::after,
+.logout:focus::after {
+  z-index: 2;
+}
+.user:hover::before,
+.logout:hover::before {
+  z-index: 1;
 }
