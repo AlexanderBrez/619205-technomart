@@ -6,7 +6,7 @@
   <title>HTML Academy: Техномарт</title>
   <link rel="stylesheet" href="css/normalize.css" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700%7CPT+Sans:400,700&amp;subset=cyrillic" />
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/style-min.css" />
 </head>
 
 <body>
@@ -27,6 +27,7 @@
           <li class="main-upper-header-element-search">
             <form action="https://echo.htmlacademy.ru" method="get">
               <input type="text" name="search" id="search" placeholder="Поиск:">
+              <span class="icon-search"></span>
             </form>
           </li>
           <!-- ЗАКЛАДКИ -->
@@ -144,23 +145,23 @@
             </div>
             <ul class="producer-list">
               <li class="producer-option">
-                <input class="visually-hidden producer-input-checkbox" name="bosch" type="checkbox" id="bosch" checked/>
+                <input class="visually-hidden producer-input-checkbox disabled" name="bosch" type="checkbox" id="bosch" checked/>
                 <label for="bosch">BOSCH</label>
               </li>
               <li class="producer-option">
-                <input class="visually-hidden producer-input-checkbox" name="interskol" type="checkbox" id="interskol" />
+                <input class="visually-hidden producer-input-checkbox disabled" name="interskol" type="checkbox" id="interskol" />
                 <label for="interskol">Интерскол</label>
               </li>
               <li class="producer-option">
-                <input class="visually-hidden producer-input-checkbox" name="makita" type="checkbox" id="makita" checked/>
+                <input class="visually-hidden producer-input-checkbox disabled" name="makita" type="checkbox" id="makita" checked/>
                 <label for="makita">MAKITA</label>
               </li>
               <li class="producer-option">
-                <input class="visually-hidden producer-input-checkbox" name="dewalt" type="checkbox" id="dewalt" />
+                <input class="visually-hidden producer-input-checkbox disabled" name="dewalt" type="checkbox" id="dewalt" />
                 <label for="dewalt">DEWALT</label>
               </li>
               <li class="producer-option">
-                <input class="visually-hidden producer-input-checkbox" name="hitachi" type="checkbox" id="hitachi" />
+                <input class="visually-hidden producer-input-checkbox disabled" name="hitachi" type="checkbox" id="hitachi" />
                 <label for="hitachi">HITACHI</label>
               </li>
             </ul>
@@ -169,11 +170,11 @@
             </div>
             <ul class="supply-list">
               <li class="supply-option">
-                <input class="visually-hidden producer-input-radio" name="supply" type="radio" value="battery" id="supply-choice1" checked/>
+                <input class="visually-hidden producer-input-radio disabled" name="supply" type="radio" value="battery" id="supply-choice1" checked/>
                 <label for="supply-choice1">АККУМУЛЯТРОНЫЕ</label>
               </li>
               <li class="supply-option">
-                <input class="visually-hidden producer-input-radio" name="supply" type="radio" value="net" id="supply-choice2" />
+                <input class="visually-hidden producer-input-radio disabled" name="supply" type="radio" value="net" id="supply-choice2" />
                 <label for="supply-choice2">СЕТЕВЫЕ</label>
               </li>
             </ul>
@@ -361,7 +362,7 @@
       <a class="cart-popup-close-link" href="#"><img src="img/svg-technomart/form-2.svg" width="21" height="21" alt="Закрыть"/><span class="visually-hidden">Закрыть</span></a>
     </div>
   </section>
-<script src="js/popups.js"></script>
+<script src="js/popups-min.js"></script>
 </body>
 
 </html>
