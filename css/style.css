@@ -3327,18 +3327,18 @@ img {
 }
 .main-logo-hover {
   position: absolute;
-  left: 20px;
   top: 20px;
+  left: 20px;
 }
 .username::before {
   content: "";
   position: absolute;
   top: 13px;
   left: 13px;
+  z-index: 2;
 
   width: 20px;
   height: 18px;
-  z-index: 2;
 
   background-image: url("../img/svg-technomart/icon-user.svg");
   background-repeat: no-repeat;
@@ -3350,10 +3350,10 @@ img {
   position: absolute;
   top: 13px;
   left: 13px;
+  z-index: 0;
 
   width: 20px;
   height: 18px;
-  z-index: 0;
 
   background-image: url("../img/icon-user-blue.png");
   background-repeat: no-repeat;
@@ -3368,20 +3368,22 @@ img {
 }
 .logo-hover {
   position: absolute;
-  top: 0px;
+  top: 0;
   z-index: -1;
 }
 .main-upper-header-element-logo {
   width: 220px;
   height: 42px;
-  background-color: #ee3643;
-  line-height: 24px;
+
   font-size: 24px;
+  line-height: 24px;
+
+  background-color: #ee3643;
 }
 .main-upper-header-element-logo span {
   display: block;
-  padding-left: 56px;
   padding-top: 10px;
+  padding-left: 56px;
 }
 .catalog-upper-header-element-logo:hover {
   background-color: #ca2c37;
