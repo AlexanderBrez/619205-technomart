@@ -39,10 +39,16 @@ if (mapclose) {
 };
 var pm = document.querySelector(".pm");
 var contactspopup = document.querySelector(".contacts-popup");
+if (form) {
 var form = contactspopup.querySelector("form");
 var username = contactspopup.querySelector("[name=name]");
 var useremail = contactspopup.querySelector("[name=email]");
+}
 if (pm) {
+  var form = contactspopup.querySelector("form");
+  var username = contactspopup.querySelector("[name=name]");
+  var useremail = contactspopup.querySelector("[name=email]");
+  var contactsclose = contactspopup.querySelector(".contacts-popup-close-link");
   pm.addEventListener("click", function(evt) {
     evt.preventDefault();
     contactspopup.classList.add("modal-show");
@@ -66,7 +72,6 @@ if (pm) {
     }
   });
 };
-var contactsclose = contactspopup.querySelector(".contacts-popup-close-link");
 if (contactsclose) {
   contactsclose.addEventListener("click", function(evt) {
     evt.preventDefault();
